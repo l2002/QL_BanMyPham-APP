@@ -61,6 +61,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnLuuHD = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             // btnHuyHD
             // 
             this.btnHuyHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHuyHD.Location = new System.Drawing.Point(870, 561);
+            this.btnHuyHD.Location = new System.Drawing.Point(870, 632);
             this.btnHuyHD.Name = "btnHuyHD";
             this.btnHuyHD.Size = new System.Drawing.Size(187, 49);
             this.btnHuyHD.TabIndex = 25;
@@ -78,7 +79,7 @@
             // btnThemHD
             // 
             this.btnThemHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemHD.Location = new System.Drawing.Point(229, 561);
+            this.btnThemHD.Location = new System.Drawing.Point(229, 632);
             this.btnThemHD.Name = "btnThemHD";
             this.btnThemHD.Size = new System.Drawing.Size(187, 49);
             this.btnThemHD.TabIndex = 23;
@@ -362,12 +363,22 @@
             // btnLuuHD
             // 
             this.btnLuuHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLuuHD.Location = new System.Drawing.Point(555, 561);
+            this.btnLuuHD.Location = new System.Drawing.Point(555, 632);
             this.btnLuuHD.Name = "btnLuuHD";
             this.btnLuuHD.Size = new System.Drawing.Size(187, 49);
             this.btnLuuHD.TabIndex = 24;
             this.btnLuuHD.Text = "LƯU HÓA ĐƠN";
             this.btnLuuHD.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(497, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 49);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "TẠO HÓA ĐƠN";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmBanHang
             // 
@@ -375,6 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1367, 773);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHuyHD);
             this.Controls.Add(this.btnThemHD);
             this.Controls.Add(this.groupBox1);
@@ -426,5 +438,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnLuuHD;
+        private System.Windows.Forms.Button button1;
     }
 }

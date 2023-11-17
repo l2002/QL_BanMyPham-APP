@@ -12,6 +12,7 @@ namespace DTO
         public string MaKH { get; set; }
         public string MaNV { get; set; }
         public string NgayDat { get; set; }
+        public string TinhTrang { get; set; }
         public float TongTien { get; set; }
     }
 }

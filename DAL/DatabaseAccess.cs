@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DatabaseAccess
     {
-        protected SqlConnection con = new SqlConnection("Data Source=DESKTOP-D5ACUIJ\\SQL;Initial Catalog=QL_MyPham;Integrated Security=true;");
+        protected SqlConnection con = new SqlConnection("Data Source=DESKTOP-J787359;Initial Catalog=QL_MyPham_DA;Integrated Security=true;");
         public void Connect()
         {
             if (con.State == ConnectionState.Closed)

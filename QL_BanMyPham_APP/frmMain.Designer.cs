@@ -34,7 +34,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnNCCHSX = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
             this.btnKhach = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pnLoad = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
@@ -67,10 +68,11 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnHoaDon);
             this.panel1.Controls.Add(this.btnNCCHSX);
             this.panel1.Controls.Add(this.btnSP);
             this.panel1.Controls.Add(this.btnKhach);
@@ -86,7 +88,7 @@
             this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Aqua;
-            this.button5.Location = new System.Drawing.Point(26, 699);
+            this.button5.Location = new System.Drawing.Point(26, 622);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(183, 53);
             this.button5.TabIndex = 4;
@@ -120,18 +122,18 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnNCCHSX_Click);
             // 
-            // button3
+            // btnHoaDon
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Aqua;
-            this.button3.Location = new System.Drawing.Point(26, 454);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 53);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Hóa Đơn";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.btnNCCHSX_Click);
+            this.btnHoaDon.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.ForeColor = System.Drawing.Color.Aqua;
+            this.btnHoaDon.Location = new System.Drawing.Point(26, 454);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(183, 53);
+            this.btnHoaDon.TabIndex = 4;
+            this.btnHoaDon.Text = "Hóa Đơn";
+            this.btnHoaDon.UseVisualStyleBackColor = false;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnNCCHSX
             // 
@@ -192,7 +194,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(183, 53);
             this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Trang Chủ";
+            this.btnHome.Text = "Giao Hàng";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -245,6 +247,18 @@
             this.pnLoad.Size = new System.Drawing.Size(1366, 776);
             this.pnLoad.TabIndex = 6;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Aqua;
+            this.button3.Location = new System.Drawing.Point(26, 696);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(183, 53);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Sản Phẩm";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,9 +300,10 @@
         private System.Windows.Forms.Button btnNCCHSX;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }
 
