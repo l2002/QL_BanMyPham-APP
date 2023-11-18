@@ -126,19 +126,7 @@ namespace QL_BanMyPham_APP
 
         private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                txtMaNV.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
-                txtTenNV.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString();
-                cboGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[2].Value.ToString();
-                txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
-                txtDienThoai.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString();
-                dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
-            }
-            catch 
-            {
-                return;
-            }
+            
         }
     }
 }

@@ -45,6 +45,7 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\DAL.pdb
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBanHang.resources
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmGiaoHang.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmMain.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmNhanVien.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmTrangChu.resources
@@ -54,4 +55,3 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.exe
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.pdb
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN TỐT NGHIỆP\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmGiaoHang.resources

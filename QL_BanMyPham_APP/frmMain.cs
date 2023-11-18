@@ -23,7 +23,7 @@ namespace QL_BanMyPham_APP
 
             lblTitle.Text = "Trang Chủ";
             this.pnLoad.Controls.Clear();
-            frmGiaoHang frm = new frmGiaoHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmTrangChu frm = new frmTrangChu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
@@ -63,6 +63,18 @@ namespace QL_BanMyPham_APP
             lblTitle.Text = "Hóa Đơn";
             this.pnLoad.Controls.Clear();
             frmBanHang frm = new frmBanHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            btnHoaDon.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Giao Hàng";
+            this.pnLoad.Controls.Clear();
+            frmGiaoHang frm = new frmGiaoHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();

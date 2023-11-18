@@ -194,7 +194,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(183, 53);
             this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Giao Hàng";
+            this.btnHome.Text = "Trang Chủ";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -256,8 +256,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 53);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Sản Phẩm";
+            this.button3.Text = "Giao Hàng";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmMain
             // 
