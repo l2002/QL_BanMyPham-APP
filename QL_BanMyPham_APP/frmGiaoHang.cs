@@ -46,27 +46,26 @@ namespace QL_BanMyPham_APP
                 return;
             }
         }
-        private bool btnUpdateNgayGiaoClicked = false;
-        private bool btnUpdateTrangThaiClicked = false;
+        bool btnUpdateNgayGiaoClicked = false;
+        bool btnUpdateTrangThaiClicked = false;
 
         private void btnUpdateNgayGiao_Click(object sender, EventArgs e)
         {
+            btnUpdateNgayGiaoClicked = true;
             btnLuu.Enabled = true;
             txtNgayGiao.Enabled = true;
-            btnUpdateNgayGiaoClicked = true;
         }
 
         private void btnUpdateTrangThai_Click(object sender, EventArgs e)
         {
+            btnUpdateTrangThaiClicked=true;
             btnLuu.Enabled = true;
             cboTrangThai.Enabled= true;
-            btnUpdateTrangThaiClicked=true;
         }
 
      
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            Button btnSender = (Button)sender;
             if (btnUpdateNgayGiaoClicked)
             {
                 dhDTO.NgayGiao = txtNgayGiao.Text;
@@ -82,7 +81,8 @@ namespace QL_BanMyPham_APP
                 }
                 loadTable();
                 btnLuu.Enabled = false;
-                txtNgayGiao.Enabled = false;               
+                txtNgayGiao.Enabled = false;
+                btnUpdateNgayGiaoClicked = false;
             }
             else if(btnUpdateTrangThaiClicked)
             {
@@ -100,6 +100,7 @@ namespace QL_BanMyPham_APP
                 loadTable();
                 btnLuu.Enabled = false;
                 cboTrangThai.Enabled = false;
+                btnUpdateTrangThaiClicked=false;
             }
         }
 

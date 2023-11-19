@@ -57,6 +57,12 @@
     <Compile Include="frmBanHang.Designer.cs">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCTDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTDH.Designer.cs">
+      <DependentUpon>frmCTDH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGiaoHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTDH.resx">
+      <DependentUpon>frmCTDH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoHang.resx">
       <DependentUpon>frmGiaoHang.cs</DependentUpon>

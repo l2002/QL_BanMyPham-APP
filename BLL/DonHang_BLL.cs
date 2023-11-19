@@ -12,7 +12,12 @@ namespace BLL
     public class DonHang_BLL
     {
         DonHangAccess dhAccess = new DonHangAccess();
+        DatabaseAccess dbAccess = new DatabaseAccess();
 
+        public string taoMaDH()
+        {
+            return dbAccess.CreateKey("HDB");
+        }
         public DataTable getHoaDon()
         {
             return dhAccess.getHoaDon();

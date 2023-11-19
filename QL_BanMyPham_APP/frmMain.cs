@@ -79,5 +79,17 @@ namespace QL_BanMyPham_APP
             this.pnLoad.Controls.Add(frm);
             frm.Show();
         }
+
+        private void btnSP_Click(object sender, EventArgs e)
+        {
+            btnSP.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Sản Phẩm";
+            this.pnLoad.Controls.Clear();
+            frmSanPham frm = new frmSanPham() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }
