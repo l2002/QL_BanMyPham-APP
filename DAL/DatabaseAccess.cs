@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DatabaseAccess
     {
-        protected SqlConnection con = new SqlConnection("Data Source=DESKTOP-J787359;Initial Catalog=QL_MyPham_DA;Integrated Security=true;");
+        protected SqlConnection con = new SqlConnection("Data Source=DESKTOP-D5ACUIJ\\SQL;Initial Catalog=QL_MyPham;Integrated Security=true;");
         public void Connect()
         {
             if (con.State == ConnectionState.Closed)
@@ -38,7 +38,15 @@ namespace DAL
             Disconnect();
             return kq;
         }
-    
+        public int executeScalar(string sql)
+        {
+            Connect();
+            SqlCommand command = new SqlCommand(sql, con);
+            int kq = (int)command.ExecuteScalar();
+            Disconnect();
+            return kq;
+        }
+
         public void Disconnect()
         {
             if (con != null && con.State == ConnectionState.Open)
