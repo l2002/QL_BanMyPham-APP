@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,10 +12,23 @@ namespace BLL
     public class CTDH_BLL
     {
         CTDHAccess ctdhAccess=new CTDHAccess();
+        DatabaseAccess databaseAccess=new DatabaseAccess();
 
-        public DataTable getCTDH()
+        public DataTable getCTDH(CTDonHang ctdh)
         {
-            return ctdhAccess.getCTDH();
+            return ctdhAccess.getCTDH(ctdh);
+        }
+        public int themCTHD(CTDonHang ctdh)
+        {
+            return ctdhAccess.themCTHD(ctdh);
+        }
+        public bool checkKey(string str)
+        {
+            return databaseAccess.CheckKey(str);
+        }
+        public int ktraSPDaCo(CTDonHang ctdh)
+        {         
+            return ctdhAccess.ktSPDaCo(ctdh);
         }
     }
 }

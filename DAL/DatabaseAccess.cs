@@ -78,7 +78,16 @@ namespace DAL
                 con.Close();
             }
         }
-
+        public bool CheckKey(string sql)
+        {
+            SqlDataAdapter dap = new SqlDataAdapter(sql, con);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            if (table.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
         public string CreateKey(string tiento)
         {
             string key = tiento;
@@ -101,6 +110,12 @@ namespace DAL
             t = String.Format("_{0}{1}{2}", partsTime[0], partsTime[1], partsTime[2]);
             key = key + t;
             return key;
+        }
+        public string ConvertDateTime(string date)
+        {
+            string[] elements = date.Split('/');
+            string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
+            return dt;
         }
         public string ConvertTimeTo24(string hour)
         {

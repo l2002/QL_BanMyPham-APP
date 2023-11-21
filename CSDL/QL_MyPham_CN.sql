@@ -16,7 +16,7 @@ create table ThuongHieu
 create table KhuyenMai
 (
 	MaKM char(20) primary key,
-	TenKM nvarchar(50)
+	TenKM int
 )
 create table NhaCC
 (
@@ -87,6 +87,20 @@ create table CTDonHang
 	constraint FK_CTDonHang_SanPham foreign key(MaSP) references SanPham,
 )
 
-select * from DonHang
+select * from CTDonHang
 
-update DonHang set NgayGiao= '2023-02-02' where MaDH = 'DH01'
+create function LOAD_CTHD_FUNC (@mahdban char(30))
+returns table
+as
+return(SELECT MaDH,a.MaSP, b.TenSP, a.SOLUONGMUA,b.HSD, b.GiaBan, c.TenKM,a.THANHTIEN FROM CTDonHang AS a, SanPham AS b, KhuyenMai as c WHERE a.MaDH = @mahdban AND a.MaSP=b.MaSP and b.MaKM=c.MaKM)
+go
+
+drop function LOAD_CTHD_FUNC
+
+
+select * from DonHang
+select * from CTDonHang
+select * from KhuyenMai
+select * from LOAD_CTHD_FUNC ('HDB11212023_150430')
+SELECT a.MaDH,a.MaSP, b.TenSP, a.SOLUONGMUA,b.HSD, b.GiaBan, a.THANHTIEN,c.TenKM FROM CTDonHang AS a, SanPham AS b,KhuyenMai as c WHERE a.MaDH = 'HDB11212023_150430    ' AND a.MaSP=b.MaSP and b.MaKM=c.MaKM
+SELECT MaSP FROM CTDonHang WHERE MaSP=N'SP02' AND MaDH = N'HDB11212023_150430'

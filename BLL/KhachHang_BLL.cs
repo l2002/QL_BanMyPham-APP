@@ -13,10 +13,7 @@ namespace BLL
     {
         KhachHangAccesss khAccess = new KhachHangAccesss();
         DatabaseAccess dbAccess=new DatabaseAccess();
-        public List<KhachHang> GetListKhachHang()
-        {
-            return khAccess.getListKhachHang();
-        }
+
         public string GetFieldValues(string str)
         {
             return dbAccess.GetFieldValues(str);

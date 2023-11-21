@@ -32,6 +32,8 @@
             this.btnThemHD = new System.Windows.Forms.Button();
             this.cboMaKH = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNgayDat = new System.Windows.Forms.DateTimePicker();
+            this.btnTaoHD = new System.Windows.Forms.Button();
             this.txtSĐTKH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDiaChiKH = new System.Windows.Forms.TextBox();
@@ -45,16 +47,19 @@
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLuuHD = new System.Windows.Forms.Button();
-            this.btnTaoHD = new System.Windows.Forms.Button();
-            this.txtNgayDat = new System.Windows.Forms.DateTimePicker();
             this.btnThemSP = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvDH = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuyHD
             // 
+            this.btnHuyHD.Enabled = false;
             this.btnHuyHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHuyHD.Location = new System.Drawing.Point(870, 632);
+            this.btnHuyHD.Location = new System.Drawing.Point(880, 712);
             this.btnHuyHD.Name = "btnHuyHD";
             this.btnHuyHD.Size = new System.Drawing.Size(187, 49);
             this.btnHuyHD.TabIndex = 25;
@@ -63,13 +68,15 @@
             // 
             // btnThemHD
             // 
+            this.btnThemHD.Enabled = false;
             this.btnThemHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemHD.Location = new System.Drawing.Point(229, 632);
+            this.btnThemHD.Location = new System.Drawing.Point(994, 126);
             this.btnThemHD.Name = "btnThemHD";
-            this.btnThemHD.Size = new System.Drawing.Size(187, 49);
+            this.btnThemHD.Size = new System.Drawing.Size(290, 49);
             this.btnThemHD.TabIndex = 23;
             this.btnThemHD.Text = "THÊM HÓA ĐƠN";
             this.btnThemHD.UseVisualStyleBackColor = true;
+            this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
             // 
             // cboMaKH
             // 
@@ -83,6 +90,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtNgayDat);
+            this.groupBox1.Controls.Add(this.btnTaoHD);
+            this.groupBox1.Controls.Add(this.btnThemHD);
             this.groupBox1.Controls.Add(this.txtSĐTKH);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cboMaKH);
@@ -103,6 +112,28 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông rin chung(Hóa đơn bán)";
+            // 
+            // txtNgayDat
+            // 
+            this.txtNgayDat.Enabled = false;
+            this.txtNgayDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtNgayDat.Location = new System.Drawing.Point(151, 93);
+            this.txtNgayDat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNgayDat.Name = "txtNgayDat";
+            this.txtNgayDat.Size = new System.Drawing.Size(263, 27);
+            this.txtNgayDat.TabIndex = 40;
+            // 
+            // btnTaoHD
+            // 
+            this.btnTaoHD.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTaoHD.Location = new System.Drawing.Point(994, 34);
+            this.btnTaoHD.Name = "btnTaoHD";
+            this.btnTaoHD.Size = new System.Drawing.Size(290, 49);
+            this.btnTaoHD.TabIndex = 26;
+            this.btnTaoHD.Text = "TẠO HÓA ĐƠN";
+            this.btnTaoHD.UseVisualStyleBackColor = true;
+            this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
             // 
             // txtSĐTKH
             // 
@@ -204,40 +235,20 @@
             // 
             // btnLuuHD
             // 
+            this.btnLuuHD.Enabled = false;
             this.btnLuuHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLuuHD.Location = new System.Drawing.Point(555, 632);
+            this.btnLuuHD.Location = new System.Drawing.Point(260, 712);
             this.btnLuuHD.Name = "btnLuuHD";
             this.btnLuuHD.Size = new System.Drawing.Size(187, 49);
             this.btnLuuHD.TabIndex = 24;
             this.btnLuuHD.Text = "LƯU HÓA ĐƠN";
             this.btnLuuHD.UseVisualStyleBackColor = true;
             // 
-            // btnTaoHD
-            // 
-            this.btnTaoHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTaoHD.Location = new System.Drawing.Point(297, 538);
-            this.btnTaoHD.Name = "btnTaoHD";
-            this.btnTaoHD.Size = new System.Drawing.Size(290, 49);
-            this.btnTaoHD.TabIndex = 26;
-            this.btnTaoHD.Text = "TẠO HÓA ĐƠN";
-            this.btnTaoHD.UseVisualStyleBackColor = true;
-            this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
-            // 
-            // txtNgayDat
-            // 
-            this.txtNgayDat.Enabled = false;
-            this.txtNgayDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtNgayDat.Location = new System.Drawing.Point(151, 93);
-            this.txtNgayDat.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNgayDat.Name = "txtNgayDat";
-            this.txtNgayDat.Size = new System.Drawing.Size(263, 27);
-            this.txtNgayDat.TabIndex = 40;
-            // 
             // btnThemSP
             // 
+            this.btnThemSP.Enabled = false;
             this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemSP.Location = new System.Drawing.Point(691, 538);
+            this.btnThemSP.Location = new System.Drawing.Point(517, 712);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(290, 49);
             this.btnThemSP.TabIndex = 27;
@@ -245,16 +256,42 @@
             this.btnThemSP.UseVisualStyleBackColor = true;
             this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(1092, 671);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(263, 20);
+            this.txtTongTien.TabIndex = 42;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(1018, 678);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Tổng tiền:";
+            // 
+            // dgvDH
+            // 
+            this.dgvDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDH.Location = new System.Drawing.Point(13, 276);
+            this.dgvDH.Name = "dgvDH";
+            this.dgvDH.Size = new System.Drawing.Size(1342, 369);
+            this.dgvDH.TabIndex = 43;
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1367, 773);
+            this.Controls.Add(this.dgvDH);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnThemSP);
-            this.Controls.Add(this.btnTaoHD);
             this.Controls.Add(this.btnHuyHD);
-            this.Controls.Add(this.btnThemHD);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLuuHD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -263,7 +300,9 @@
             this.Load += new System.EventHandler(this.frmBanHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDH)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -289,5 +328,8 @@
         private System.Windows.Forms.Button btnTaoHD;
         private System.Windows.Forms.DateTimePicker txtNgayDat;
         private System.Windows.Forms.Button btnThemSP;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dgvDH;
     }
 }

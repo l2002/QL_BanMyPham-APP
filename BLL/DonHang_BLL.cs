@@ -18,6 +18,14 @@ namespace BLL
         {
             return dbAccess.CreateKey("HDB");
         }
+        public int themHD(DonHang dh)
+        {
+            return dhAccess.themHD(dh);
+        }
+        public DataTable getHoaDonOnl()
+        {
+            return dhAccess.getHoaDonOnl();
+        }
         public DataTable getHoaDon()
         {
             return dhAccess.getHoaDon();

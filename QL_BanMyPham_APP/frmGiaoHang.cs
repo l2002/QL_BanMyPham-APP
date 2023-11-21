@@ -22,7 +22,7 @@ namespace QL_BanMyPham_APP
         }
         private void loadTable()
         {
-            dgvHD.DataSource = dhBLL.getHoaDon();
+            dgvHD.DataSource = dhBLL.getHoaDonOnl();
         }
 
         private void frmGiaoHang_Load(object sender, EventArgs e)

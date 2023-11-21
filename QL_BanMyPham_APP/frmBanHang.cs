@@ -37,10 +37,14 @@ namespace QL_BanMyPham_APP
         {
 
         }
-
+        private void loadTable()
+        {
+            dgvDH.DataSource = dhBLL.getHoaDon();
+        }
         private void frmBanHang_Load(object sender, EventArgs e)
         {
-            loadCombo();
+            loadTable();
+            loadCombo();           
         }
     
         private void cboMaKH_TextChanged(object sender, EventArgs e)
@@ -61,12 +65,42 @@ namespace QL_BanMyPham_APP
         private void btnTaoHD_Click(object sender, EventArgs e)
         {
             txtMaHD.Text = dhBLL.taoMaDH();
+            btnThemHD.Enabled = true;
+            btnThemSP.Enabled = true;
+            btnTaoHDClicked = true;          
         }
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            frmCTDH frm=new frmCTDH();
-            frm.Show();
+            frmCTDH Child = new frmCTDH(txtMaHD.Text);
+            Child.Show();
+        }
+
+        bool btnTaoHDClicked = false;
+        private void btnThemHD_Click(object sender, EventArgs e)
+        {
+            dhDTO.MaDH = txtMaHD.Text;
+            dhDTO.NgayDat = txtNgayDat.Text;
+            dhDTO.TongTien = 0;
+            dhDTO.MaKH = cboMaKH.SelectedValue.ToString();
+          
+            if (btnTaoHDClicked)
+            {
+                if (dhBLL.themHD(dhDTO) != -1)
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                }
+            }          
+            else
+            {
+                MessageBox.Show("Vui lòng tạo đơn hàng trước khi thêm!");
+            }
+            loadTable();
+            btnThemHD.Enabled = false;
         }
     }
 }
