@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CTDH_BLL.cs" />
+    <Compile Include="DatHang_BLL.cs" />
     <Compile Include="DonHang_BLL.cs" />
     <Compile Include="KhachHang_BLL.cs" />
     <Compile Include="LoaiHang_BLL.cs" />

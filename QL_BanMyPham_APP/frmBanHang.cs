@@ -37,16 +37,24 @@ namespace QL_BanMyPham_APP
         {
 
         }
+        public void ResetValue()
+        {
+            cboMaKH.SelectedValue = -1;
+            txtNgayDat.Text = DateTime.Now.ToString();
+            txtTongTien.Text = "0";
+        }
         private void loadTable()
         {
             dgvDH.DataSource = dhBLL.getHoaDon();
         }
         private void frmBanHang_Load(object sender, EventArgs e)
         {
+
             loadTable();
-            loadCombo();           
+            loadCombo();
+
         }
-    
+
         private void cboMaKH_TextChanged(object sender, EventArgs e)
         {
             string str;
@@ -66,29 +74,37 @@ namespace QL_BanMyPham_APP
         {
             txtMaHD.Text = dhBLL.taoMaDH();
             btnThemHD.Enabled = true;
-            btnThemSP.Enabled = true;
-            btnTaoHDClicked = true;          
+            btnTaoHDClicked = true;
+
+            ResetValue();
+
         }
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            frmCTDH Child = new frmCTDH(txtMaHD.Text);
-            Child.Show();
+            
         }
 
         bool btnTaoHDClicked = false;
         private void btnThemHD_Click(object sender, EventArgs e)
         {
+            if(cboMaKH.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn Khách hàng!");
+                return;
+            }
             dhDTO.MaDH = txtMaHD.Text;
             dhDTO.NgayDat = txtNgayDat.Text;
-            dhDTO.TongTien = 0;
             dhDTO.MaKH = cboMaKH.SelectedValue.ToString();
-          
+            
+
             if (btnTaoHDClicked)
             {
                 if (dhBLL.themHD(dhDTO) != -1)
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                    frmCTDH Child = new frmCTDH(txtMaHD.Text);
+                    Child.Show();
                 }
                 else
                 {
@@ -101,6 +117,26 @@ namespace QL_BanMyPham_APP
             }
             loadTable();
             btnThemHD.Enabled = false;
+        }
+
+        private void txtMaHD_TextChanged(object sender, EventArgs e)
+        {
+            txtTongTien.Text = dhBLL.getTongTien(txtMaHD.Text).ToString();
+        }
+
+        private void dgvDH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtMaHD.Text = dgvDH.CurrentRow.Cells[0].Value.ToString();
+                cboMaKH.SelectedValue = dgvDH.CurrentRow.Cells[1].Value.ToString();
+                txtNgayDat.Text = dgvDH.CurrentRow.Cells[2].Value.ToString();
+                txtTongTien.Text = dgvDH.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch
+            {
+                return;
+            }
         }
     }
 }

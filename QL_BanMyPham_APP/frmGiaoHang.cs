@@ -14,8 +14,8 @@ namespace QL_BanMyPham_APP
 {
     public partial class frmGiaoHang : Form
     {
-        DonHang dhDTO = new DonHang();
-        DonHang_BLL dhBLL = new DonHang_BLL();
+        DatHang dhDTO = new DatHang();
+        DatHang_BLL dhBLL = new DatHang_BLL();
         public frmGiaoHang()
         {
             InitializeComponent();

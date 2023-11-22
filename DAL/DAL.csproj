@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CTDHAccess.cs" />
     <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="DatHangAccess.cs" />
     <Compile Include="DonHangAccess.cs" />
     <Compile Include="KhachHangAccesss.cs" />
     <Compile Include="LoaiHangAccess.cs" />

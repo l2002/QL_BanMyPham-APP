@@ -22,25 +22,15 @@ namespace BLL
         {
             return dhAccess.themHD(dh);
         }
-        public DataTable getHoaDonOnl()
-        {
-            return dhAccess.getHoaDonOnl();
-        }
+       
         public DataTable getHoaDon()
         {
             return dhAccess.getHoaDon();
         }
-        public int updateTinhTrang(DonHang dh)
+        
+        public string getTongTien(string madh)
         {
-            return dhAccess.updateTrangThai(dh);
-        }
-        public int updateNgayGiao(DonHang dh)
-        {
-            return dhAccess.updateNgayGiao(dh);
-        }
-        public int xoaDonHang(string madh)
-        {
-            return dhAccess.xoaDonHang(madh);
+            return dhAccess.getTongTien(madh);
         }
     }
 }

@@ -128,5 +128,10 @@ namespace QL_BanMyPham_APP
         {
             
         }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

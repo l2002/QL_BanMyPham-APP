@@ -11,6 +11,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QL_BanMyPham_APP
 {
@@ -19,6 +20,9 @@ namespace QL_BanMyPham_APP
         CTDonHang ctdhDTO = new CTDonHang();
         CTDH_BLL ctdhBLL = new CTDH_BLL();
         SanPham_BLL spBLL = new SanPham_BLL();
+
+        DonHang dhDTO = new DonHang();
+        DonHang_BLL dhBLL = new DonHang_BLL();
 
         private string _maDH;
         public frmCTDH(string maDH) : this()
@@ -40,10 +44,13 @@ namespace QL_BanMyPham_APP
         private void loadTable()
         {
             dgvDS.DataSource = ctdhBLL.getCTDH(ctdhDTO);
+            txtTongTien.Text = dhBLL.getTongTien(txtMaDH.Text).ToString();
+
         }
         private void frmCTDH_Load(object sender, EventArgs e)
         {
             loadCombo();
+            this.CenterToScreen();
         }
 
         private void cboMaSP_TextChanged(object sender, EventArgs e)
@@ -65,17 +72,20 @@ namespace QL_BanMyPham_APP
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-            double tt, sl, dg;
+            double tt, sl, dg, km;
             if (txtSoLuong.Text == "")
                 sl = 0;
             else
                 sl = double.Parse(txtSoLuong.Text);
-
+            if (txtKhuyenMai.Text == "")
+                km = 0;
+            else
+                km = double.Parse(txtKhuyenMai.Text);
             if (txtGiaBan.Text == "")
                 dg = 0;
             else
                 dg = double.Parse(txtGiaBan.Text);
-            tt = sl * dg;
+            tt = sl * dg - sl * dg * km / 100;
             txtThanhTien.Text = tt.ToString();
         }
 
@@ -90,8 +100,8 @@ namespace QL_BanMyPham_APP
             ctdhDTO.MaSP = cboMaSP.SelectedValue.ToString();
             ctdhDTO.SoLuongMua = int.Parse(txtSoLuong.Text);
             ctdhDTO.ThanhTien = double.Parse(txtThanhTien.Text);
-
-            if (ctdhBLL.ktraSPDaCo(ctdhDTO) == 0)
+            
+            if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
             {
                 if (ctdhBLL.themCTHD(ctdhDTO) != -1)
                 {
@@ -112,6 +122,11 @@ namespace QL_BanMyPham_APP
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

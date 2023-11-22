@@ -28,12 +28,17 @@ namespace DAL
         {
             string sql = "INSERT INTO CTDonHang(MaDH, MaSP, SoLuongMua, DonGia, ThanhTien) VALUES (N'" + ctdh.MaDH.Trim() + "'," +
                 "N'" + ctdh.MaSP + "'," + ctdh.SoLuongMua + "," + ctdh.DonGia + "," + ctdh.ThanhTien + ")";
+
             int kq = database.excuteNonQuery(sql);
             return kq;
         }
         public int ktSPDaCo(CTDonHang ctdh)
         {
             string sql = "SELECT MaSP FROM CTDonHang WHERE MaSP=N'" + ctdh.MaSP + "' AND MaDH = N'" + ctdh.MaDH + "'";
+            if (database.CheckKey(sql))
+            {
+                return 0;
+            }
             int kq = database.excuteNonQuery(sql);
             return kq;
         }
