@@ -70,11 +70,32 @@ create table DonHang
 	MaKH char(20),
 	MaNV char(20),
 	NgayDat date,
-	NgayGiao date,
-	TinhTrang nvarchar(20),
 	TongTien money,
 	constraint FK_DonHang_NhanVien foreign key(MaNV) references NhanVien,
 	constraint FK_Donhang_KhachHang foreign key(MaKH) references KhachHang,
+)
+
+create table DatHang
+(
+	MaDH char(20) primary key,
+	MaNguoidung int NULL,
+	NgayDat date,
+	NgayGiao date,
+	TrangThai nvarchar(20),
+	TongTien money,
+)
+ALTER TABLE [dbo].DatHang  WITH CHECK ADD  CONSTRAINT [FK_DatHang_Khachhang] FOREIGN KEY([MaNguoidung])
+REFERENCES [dbo].[Nguoidung] ([MaNguoiDung])
+GO
+create table NguoiDung
+(
+	[MaNguoiDung] [int] IDENTITY(1,1) NOT NULL primary key,
+	[Hoten] [nvarchar](50) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Dienthoai] [nchar](10) NULL,
+	[Matkhau] [varchar](50) NULL,
+	[IDQuyen] [int] NULL,
+	[Diachi] [nvarchar](100) NULL,
 )
 create table CTDonHang
 (
@@ -92,15 +113,61 @@ select * from CTDonHang
 create function LOAD_CTHD_FUNC (@mahdban char(30))
 returns table
 as
-return(SELECT MaDH,a.MaSP, b.TenSP, a.SOLUONGMUA,b.HSD, b.GiaBan, c.TenKM,a.THANHTIEN FROM CTDonHang AS a, SanPham AS b, KhuyenMai as c WHERE a.MaDH = @mahdban AND a.MaSP=b.MaSP and b.MaKM=c.MaKM)
+return(SELECT MaDH,a.MaSP, b.TenSP, a.SoLuongMua, b.GiaBan,a.ThanhTien,c.TenKM,b.HSD FROM CTDonHang AS a, SanPham AS b, KhuyenMai as c WHERE a.MaDH = @mahdban AND a.MaSP=b.MaSP AND b.MaKM=c.MaKM)
 go
 
 drop function LOAD_CTHD_FUNC
 
+CREATE TRIGGER UPDATE_AFTERThemSP_TRIGGER ON CTDonHang AFTER INSERT 
+AS	
+	BEGIN
+		UPDATE LoHang
+		SET SOLUONG=SOLUONG-(SELECT SOLUONGMUA FROM inserted WHERE MaSP=LoHang.MaSP)
+		FROM LoHang
+		JOIN inserted ON LoHang.MaSP=inserted.MaSP
+	END
+
+CREATE TRIGGER UPDATE_TONGTIEN ON CTDonHang AFTER INSERT 
+AS
+	BEGIN
+		DECLARE @TONG decimal(10,2)
+		SELECT @TONG = (SELECT TongTien FROM DonHang WHERE MaDH=(SELECT MaDH FROM inserted))
+		DECLARE @TONGMOI decimal(10,2)
+		SELECT @TONGMOI=@TONG+(SELECT ThanhTien FROM inserted)
+		UPDATE DonHang
+		SET TONGTIEN= @TONGMOI WHERE MaDH=(SELECT MaDH FROM inserted)
+	END
+
+create proc Delete_CTHDBAN_Func @mahdban char(30),@mahangxoa char(30)
+as
+begin
+	DELETE CTDonHang WHERE MaDH=@mahdban AND MaSP = @mahangxoa
+end
+
+select * from LOAD_CTHD_FUNC ('DH01')
+select * from SanPham
+SELECT GiaBan FROM SanPham WHERE MaSP = N'SP0119112023        '
+select KhuyenMai.TenKM from SanPham,KhuyenMai where MaSP='SP0119112023' and SanPham.MaKM=KhuyenMai.MaKM
+
+update DonHang set NgayGiao= '2023-02-02' where MaDH = 'DH01'
+SELECT TenKH FROM KhachHang WHERE MaKH =N'KH01'
+SELECT MaDH,a.MaSP, b.TenSP, a.SoLuongMua, b.GiaBan, b.MaKM,a.ThanhTien,c.TenKM,b.HSD FROM CTDonHang AS a, SanPham AS b, KhuyenMai as c WHERE a.MaDH = 'HD01' AND a.MaSP=b.MaSP AND b.MaKM=c.MaKM
+
+SELECT TONGTIEN FROM DonHang WHERE MaDH =N'HDB11222023_133423'
 
 select * from DonHang
 select * from CTDonHang
-select * from KhuyenMai
-select * from LOAD_CTHD_FUNC ('HDB11212023_150430')
-SELECT a.MaDH,a.MaSP, b.TenSP, a.SOLUONGMUA,b.HSD, b.GiaBan, a.THANHTIEN,c.TenKM FROM CTDonHang AS a, SanPham AS b,KhuyenMai as c WHERE a.MaDH = 'HDB11212023_150430    ' AND a.MaSP=b.MaSP and b.MaKM=c.MaKM
-SELECT MaSP FROM CTDonHang WHERE MaSP=N'SP02' AND MaDH = N'HDB11212023_150430'
+select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='SP02' and SanPham.MaSP=LoHang.MaSP
+
+exec Delete_CTHDBAN_Func 'HDB11242023_144523', N'SP03'
+
+delete from DonHang
+delete from CTDonHang
+
+delete
+FROM DonHang
+WHERE EXISTS 
+(SELECT *
+FROM CTDonHang
+WHERE CTDonHang.MaDH = DonHang.MaDH
+AND CTDonHang.MaDH = 'HDB11242023_134350    ');

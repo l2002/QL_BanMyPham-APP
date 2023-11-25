@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtKhuyenMai = new System.Windows.Forms.Label();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.txtMaDH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.btnDong = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtKhuyenMai = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDS)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +87,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm:";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(1125, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 31);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "%";
+            // 
+            // txtKhuyenMai
+            // 
+            this.txtKhuyenMai.AutoSize = true;
+            this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhuyenMai.ForeColor = System.Drawing.Color.Red;
+            this.txtKhuyenMai.Location = new System.Drawing.Point(1089, 89);
+            this.txtKhuyenMai.Name = "txtKhuyenMai";
+            this.txtKhuyenMai.Size = new System.Drawing.Size(30, 31);
+            this.txtKhuyenMai.TabIndex = 26;
+            this.txtKhuyenMai.Text = "0";
             // 
             // btnThemSP
             // 
@@ -255,6 +277,8 @@
             this.dgvDS.Name = "dgvDS";
             this.dgvDS.Size = new System.Drawing.Size(1376, 362);
             this.dgvDS.TabIndex = 24;
+            this.dgvDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDS_CellContentClick);
+            this.dgvDS.DoubleClick += new System.EventHandler(this.dgvDS_DoubleClick);
             // 
             // btnDong
             // 
@@ -287,28 +311,6 @@
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 43;
             this.label4.Text = "Tổng tiền:";
-            // 
-            // txtKhuyenMai
-            // 
-            this.txtKhuyenMai.AutoSize = true;
-            this.txtKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhuyenMai.ForeColor = System.Drawing.Color.Red;
-            this.txtKhuyenMai.Location = new System.Drawing.Point(1089, 89);
-            this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(30, 31);
-            this.txtKhuyenMai.TabIndex = 26;
-            this.txtKhuyenMai.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(1125, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 31);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "%";
             // 
             // frmCTDH
             // 

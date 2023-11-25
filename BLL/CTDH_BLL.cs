@@ -30,5 +30,29 @@ namespace BLL
         {         
             return ctdhAccess.ktSPDaCo(ctdh);
         }
+        public int xoaCTDH(string madh)
+        {
+            return ctdhAccess.xoaCTDH(madh);
+        }
+        public int xoaSP_CTDH(string madh,string maSP)
+        {
+            return ctdhAccess.xoaSP_CTDH(madh,maSP);
+        }
+        public string GetFieldValues(string str)
+        {
+            return databaseAccess.GetFieldValues(str);
+        }
+        public int updateSL_SP(int slcon,string masp)
+        {
+            return ctdhAccess.updateSL_SP(slcon,masp);
+        }
+        public int getSLTon(string masp)
+        {
+            return ctdhAccess.getSLTon(masp);
+        }
+        public int updateTongTien_Xoa(double tongmoi,string masp)
+        {
+            return ctdhAccess.updateTongtien_Xoa(tongmoi,masp);
+        }
     }
 }

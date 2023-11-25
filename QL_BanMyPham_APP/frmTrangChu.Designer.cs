@@ -46,9 +46,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 95);
+            this.pictureBox1.Image = global::QL_BanMyPham_APP.Properties.Resources.co_nen_mo_cua_hang_ban_my_pham;
+            this.pictureBox1.Location = new System.Drawing.Point(337, 115);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1362, 678);
+            this.pictureBox1.Size = new System.Drawing.Size(702, 456);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

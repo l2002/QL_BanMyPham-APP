@@ -32,5 +32,9 @@ namespace BLL
         {
             return dhAccess.getTongTien(madh);
         }
+        public int xoaDH(string madh)
+        {
+            return dhAccess.xoaDH(madh);
+        }
     }
 }

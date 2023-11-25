@@ -52,6 +52,7 @@
     <Compile Include="DonHang_BLL.cs" />
     <Compile Include="KhachHang_BLL.cs" />
     <Compile Include="LoaiHang_BLL.cs" />
+    <Compile Include="LoHang_BLL.cs" />
     <Compile Include="NhanVien_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPham_BLL.cs" />

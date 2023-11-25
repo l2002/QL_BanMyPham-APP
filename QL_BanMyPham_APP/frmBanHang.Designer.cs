@@ -259,7 +259,6 @@
             // 
             // btnHuyHD
             // 
-            this.btnHuyHD.Enabled = false;
             this.btnHuyHD.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnHuyHD.Location = new System.Drawing.Point(583, 712);
             this.btnHuyHD.Name = "btnHuyHD";
@@ -267,6 +266,7 @@
             this.btnHuyHD.TabIndex = 25;
             this.btnHuyHD.Text = "HỦY HÓA ĐƠN";
             this.btnHuyHD.UseVisualStyleBackColor = true;
+            this.btnHuyHD.Click += new System.EventHandler(this.btnHuyHD_Click);
             // 
             // frmBanHang
             // 

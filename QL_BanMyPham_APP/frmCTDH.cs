@@ -20,6 +20,7 @@ namespace QL_BanMyPham_APP
         CTDonHang ctdhDTO = new CTDonHang();
         CTDH_BLL ctdhBLL = new CTDH_BLL();
         SanPham_BLL spBLL = new SanPham_BLL();
+        LoHang_BLL lhBLL= new LoHang_BLL();
 
         DonHang dhDTO = new DonHang();
         DonHang_BLL dhBLL = new DonHang_BLL();
@@ -33,6 +34,8 @@ namespace QL_BanMyPham_APP
         public frmCTDH()
         {
             InitializeComponent();
+            dgvDS.EditMode = DataGridViewEditMode.EditProgrammatically;
+
         }
 
         private void loadCombo()
@@ -46,11 +49,14 @@ namespace QL_BanMyPham_APP
             dgvDS.DataSource = ctdhBLL.getCTDH(ctdhDTO);
             txtTongTien.Text = dhBLL.getTongTien(txtMaDH.Text).ToString();
 
+            
         }
         private void frmCTDH_Load(object sender, EventArgs e)
         {
             loadCombo();
             this.CenterToScreen();
+
+            loadTable();
         }
 
         private void cboMaSP_TextChanged(object sender, EventArgs e)
@@ -68,6 +74,9 @@ namespace QL_BanMyPham_APP
             txtGiaBan.Text = spBLL.GetFieldValues(str);
             str = "select KhuyenMai.TenKM from SanPham,KhuyenMai WHERE MaSP = N'" + cboMaSP.SelectedValue + "' and SanPham.MaKM=KhuyenMai.MaKM";
             txtKhuyenMai.Text = spBLL.GetFieldValues(str);
+
+            str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
+            txtSLCon.Text = ctdhBLL.GetFieldValues(str);
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
@@ -96,11 +105,16 @@ namespace QL_BanMyPham_APP
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
+            if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng!");
+                return;
+            }
             ctdhDTO.MaDH = txtMaDH.Text;
             ctdhDTO.MaSP = cboMaSP.SelectedValue.ToString();
             ctdhDTO.SoLuongMua = int.Parse(txtSoLuong.Text);
             ctdhDTO.ThanhTien = double.Parse(txtThanhTien.Text);
-            
+         
             if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
             {
                 if (ctdhBLL.themCTHD(ctdhDTO) != -1)
@@ -127,6 +141,46 @@ namespace QL_BanMyPham_APP
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvDS_DoubleClick(object sender, EventArgs e)
+        {
+            string MaHangxoa, sql;
+            double thanhTienXoa, tong, tongmoi;
+            int slcon, sl, SoLuongxoa;
+
+            if ((MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            {
+                //Xóa hàng và cập nhật lại số lượng hàng 
+                MaHangxoa = dgvDS.CurrentRow.Cells["Mã SP"].Value.ToString();
+                SoLuongxoa = int.Parse(dgvDS.CurrentRow.Cells["Số lượng mua"].Value.ToString());
+                thanhTienXoa = float.Parse(dgvDS.CurrentRow.Cells["Thành tiền"].Value.ToString());
+
+                ctdhBLL.xoaSP_CTDH(txtMaDH.Text, MaHangxoa);
+                MessageBox.Show("Xóa thành công");
+
+                //// Cập nhật lại số lượng cho các mặt hàng
+                sl = int.Parse(ctdhBLL.GetFieldValues("select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='"+MaHangxoa+"' and SanPham.MaSP=LoHang.MaSP"));
+                slcon = sl + SoLuongxoa;
+                ctdhBLL.updateSL_SP(slcon, MaHangxoa);
+                txtSLCon.Text = slcon.ToString();
+
+                // Cập nhật lại tổng tiền cho hóa đơn bán
+                tong = double.Parse(ctdhBLL.GetFieldValues("SELECT TONGTIEN FROM DonHang WHERE MaDH = N'" + txtMaDH.Text + "'"));
+                tongmoi = tong - thanhTienXoa;
+                ctdhBLL.updateTongTien_Xoa(tongmoi, txtMaDH.Text);
+                loadTable();
+
+                //LoadDataGridView();
+
+            }
+
+
+        }
+
+        private void dgvDS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

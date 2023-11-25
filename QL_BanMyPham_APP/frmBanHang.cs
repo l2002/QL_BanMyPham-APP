@@ -18,7 +18,7 @@ namespace QL_BanMyPham_APP
         DonHang dhDTO = new DonHang();
         DonHang_BLL dhBLL = new DonHang_BLL();
         KhachHang_BLL khBLL = new KhachHang_BLL();
-       
+        CTDH_BLL CTDH_BLL = new CTDH_BLL();
 
         public frmBanHang()
         {
@@ -137,6 +137,21 @@ namespace QL_BanMyPham_APP
             {
                 return;
             }
+        }
+
+        private void btnHuyHD_Click(object sender, EventArgs e)
+        {
+           
+                if (CTDH_BLL.xoaCTDH(txtMaHD.Text) == 1)
+                {
+                    dhBLL.xoaDH(txtMaHD.Text);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                else
+                {
+                MessageBox.Show("Xóa thất bại!");
+            }
+            loadTable();
         }
     }
 }

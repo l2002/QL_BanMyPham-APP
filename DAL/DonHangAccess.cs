@@ -30,11 +30,16 @@ namespace DAL
             return kq;
         }
        
-
         public string getTongTien(string madh)
         {
             string sql = "SELECT TONGTIEN FROM DonHang WHERE MaDH = '"+madh+"'";
             string kq = database.GetFieldValues(sql);
+            return kq;
+        }
+        public int xoaDH(string madh)
+        {
+            string sql = "delete \r\nFROM DonHang\r\nWHERE EXISTS \r\n(SELECT *\r\nFROM CTDonHang\r\nWHERE CTDonHang.MaDH = DonHang.MaDH\r\nAND DonHang.MaDH = '"+madh+"');";
+            int kq = database.excuteNonQuery(sql);
             return kq;
         }
     }

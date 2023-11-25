@@ -59,5 +59,15 @@ namespace QL_BanMyPham_APP.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap co_nen_mo_cua_hang_ban_my_pham {
+            get {
+                object obj = ResourceManager.GetObject("co-nen-mo-cua-hang-ban-my-pham", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
