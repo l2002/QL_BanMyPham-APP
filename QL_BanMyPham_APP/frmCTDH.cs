@@ -30,6 +30,7 @@ namespace QL_BanMyPham_APP
         {
             _maDH = maDH;
             txtMaDH.Text = _maDH;
+
         }
         public frmCTDH()
         {
@@ -40,22 +41,19 @@ namespace QL_BanMyPham_APP
 
         private void loadCombo()
         {
-            spBLL.FillCombo("SELECT MaSP,TenSP FROM SanPham", cboMaSP, "MaSP", "MaSP");
+            spBLL.FillCombo("SELECT MaSP,TenSP FROM SanPham", cboMaSP, "MaSP", "TenSP");
             cboMaSP.SelectedIndex = -1;
         }
 
         private void loadTable()
         {
             dgvDS.DataSource = ctdhBLL.getCTDH(ctdhDTO);
-            txtTongTien.Text = dhBLL.getTongTien(txtMaDH.Text).ToString();
-
-            
+            txtTongTien.Text = dhBLL.getTongTien(txtMaDH.Text).ToString(); 
         }
         private void frmCTDH_Load(object sender, EventArgs e)
         {
             loadCombo();
             this.CenterToScreen();
-
             loadTable();
         }
 
@@ -64,10 +62,10 @@ namespace QL_BanMyPham_APP
             string str;
             if (cboMaSP.Text == "")
             {
-                txtTenSP.Text = "";
+                txtMaSP.Text = "";
             }
-            str = "SELECT TenSP FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
-            txtTenSP.Text = spBLL.GetFieldValues(str);
+            str = "SELECT MaSP FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
+            txtMaSP.Text = spBLL.GetFieldValues(str);
             str = "SELECT HSD FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
             txtHSD.Text = spBLL.GetFieldValues(str);
             str = "SELECT GiaBan FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
@@ -102,34 +100,55 @@ namespace QL_BanMyPham_APP
         {
 
         }
-
-        private void btnThemSP_Click(object sender, EventArgs e)
+        public int checkInput()
         {
-            if (txtSoLuong.Text == "")
+            if (txtSoLuong.Text == "" || txtSoLuong.Text=="0")
             {
                 MessageBox.Show("Vui lòng nhập số lượng!");
-                return;
+                return 0;
             }
+            if (cboMaSP.SelectedValue == null)
+            {
+                MessageBox.Show("Vui chọn sản phẩm!");
+                return 0;
+            }
+            return 1;
+        }
+        public void resetValue()
+        {
+            txtMaSP.Text = "";
+            txtSoLuong.Text = "0";
+            txtGiaBan.Text = "0";
+            txtThanhTien.Text = "0";
+            txtHSD.Text = "";
+        }
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+           
             ctdhDTO.MaDH = txtMaDH.Text;
             ctdhDTO.MaSP = cboMaSP.SelectedValue.ToString();
             ctdhDTO.SoLuongMua = int.Parse(txtSoLuong.Text);
             ctdhDTO.ThanhTien = double.Parse(txtThanhTien.Text);
-         
-            if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
+
+            if (checkInput()==1)
             {
-                if (ctdhBLL.themCTHD(ctdhDTO) != -1)
+                if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
                 {
-                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                    if (ctdhBLL.themCTHD(ctdhDTO) != -1)
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                    }
+                    loadTable();
+                    resetValue();
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Sản phẩm này đã có!");
                 }
-                loadTable();
-            }
-            else
-            {
-                MessageBox.Show("Sản phẩm này đã có!");
             }
         }
 

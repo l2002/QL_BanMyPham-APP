@@ -47,6 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pnLoad = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblMaNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
@@ -215,6 +216,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.lblMaNV);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.avt);
             this.panel2.Location = new System.Drawing.Point(1, 0);
@@ -225,13 +227,14 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Aqua;
-            this.lblName.Location = new System.Drawing.Point(30, 97);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Yellow;
+            this.lblName.Location = new System.Drawing.Point(22, 143);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(187, 24);
+            this.lblName.Size = new System.Drawing.Size(209, 25);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Nguyễn Minh Luân";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // avt
             // 
@@ -260,6 +263,17 @@
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(1366, 776);
             this.pnLoad.TabIndex = 6;
+            // 
+            // lblMaNV
+            // 
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.ForeColor = System.Drawing.Color.Aqua;
+            this.lblMaNV.Location = new System.Drawing.Point(68, 110);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(100, 24);
+            this.lblMaNV.TabIndex = 6;
+            this.lblMaNV.Text = "Xin chào:";
             // 
             // frmMain
             // 
@@ -306,6 +320,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblMaNV;
     }
 }
 

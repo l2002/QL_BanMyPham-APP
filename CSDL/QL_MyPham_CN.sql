@@ -108,6 +108,28 @@ create table CTDonHang
 	constraint FK_CTDonHang_SanPham foreign key(MaSP) references SanPham,
 )
 
+-----------------Login--------------------
+CREATE TABLE TAIKHOAN (
+  sMaTK INT IDENTITY(1,1) NOT NULL ,
+  sTaiKhoan NVARCHAR(50) NOT NULL,
+  sMatKhau NVARCHAR(50) NOT NULL,
+  Email VARCHAR(50),
+  iMaQuyen INT,
+  MaNV NVARCHAR(10),
+  CONSTRAINT PK_TAIKHOAN PRIMARY KEY(sMaTK),
+);
+
+CREATE TABLE QUYEN (
+  iMaQuyen INT IDENTITY(1,1) NOT NULL,
+  sTenQuyen NVARCHAR(50) NOT NULL,
+  CONSTRAINT PK_QUYEN PRIMARY KEY (iMaQuyen)
+);
+ALTER TABLE TAIKHOAN
+ADD CONSTRAINT FK_TAIKHOAN_QUYEN FOREIGN KEY(iMaQuyen) REFERENCES Quyen(iMaQuyen)
+
+ALTER TABLE TAIKHOAN
+ADD CONSTRAINT FK_TAIKHOAN_NhanVien FOREIGN KEY(MaNV) REFERENCES NhanVien(MaNV)
+
 select * from CTDonHang
 
 create function LOAD_CTHD_FUNC (@mahdban char(30))
@@ -164,10 +186,6 @@ exec Delete_CTHDBAN_Func 'HDB11242023_144523', N'SP03'
 delete from DonHang
 delete from CTDonHang
 
-delete
-FROM DonHang
-WHERE EXISTS 
-(SELECT *
-FROM CTDonHang
-WHERE CTDonHang.MaDH = DonHang.MaDH
-AND CTDonHang.MaDH = 'HDB11242023_134350    ');
+select * from NhanVien
+select * from TAIKHOAN
+select NhanVien.TenNV,NhanVien.MaNV from TAIKHOAN,NhanVien where TAIKHOAN.MaNV=NhanVien.MaNV and TAIKHOAN.sTaiKhoan='Vang'

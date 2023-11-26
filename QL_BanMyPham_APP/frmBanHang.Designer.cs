@@ -40,7 +40,7 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -49,6 +49,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDH = new System.Windows.Forms.DataGridView();
             this.btnHuyHD = new System.Windows.Forms.Button();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDH)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +78,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMaNV);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtNgayDat);
             this.groupBox1.Controls.Add(this.btnTaoHD);
             this.groupBox1.Controls.Add(this.btnThemHD);
@@ -87,7 +91,7 @@
             this.groupBox1.Controls.Add(this.txtTenKH);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtMaHD);
@@ -182,18 +186,18 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Mã KH:";
             // 
-            // textBox3
+            // txtTenNV
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(151, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtTenNV.Enabled = false;
+            this.txtTenNV.Location = new System.Drawing.Point(151, 191);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(263, 20);
+            this.txtTenNV.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(89, 144);
+            this.label3.Location = new System.Drawing.Point(89, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
@@ -268,6 +272,23 @@
             this.btnHuyHD.UseVisualStyleBackColor = true;
             this.btnHuyHD.Click += new System.EventHandler(this.btnHuyHD_Click);
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(151, 145);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(263, 20);
+            this.txtMaNV.TabIndex = 42;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(89, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Mã NV:";
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,7 +323,7 @@
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaHD;
@@ -313,5 +334,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvDH;
         private System.Windows.Forms.Button btnHuyHD;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.Label label9;
     }
 }

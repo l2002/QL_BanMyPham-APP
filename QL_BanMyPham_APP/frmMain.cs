@@ -12,6 +12,17 @@ namespace QL_BanMyPham_APP
 {
     public partial class frmMain : Form
     {
+
+        private string _tenNV;
+        private string _maNV;
+
+        public frmMain(string tenNV, string maNV) : this()
+        {
+            _tenNV = tenNV;
+            lblName.Text = _tenNV;
+            _maNV = maNV;
+            lblMaNV.Text = _maNV;
+        }
         public frmMain()
         {
             InitializeComponent();
@@ -62,10 +73,11 @@ namespace QL_BanMyPham_APP
 
             lblTitle.Text = "Hóa Đơn";
             this.pnLoad.Controls.Clear();
-            frmBanHang frm = new frmBanHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.pnLoad.Controls.Add(frm);
-            frm.Show();
+            frmBanHang Child = new frmBanHang(lblName.Text,lblMaNV.Text) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            Child.FormBorderStyle = FormBorderStyle.None;
+
+            this.pnLoad.Controls.Add(Child);
+            Child.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

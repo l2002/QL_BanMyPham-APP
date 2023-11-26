@@ -15,17 +15,18 @@ namespace DAL
        
         public DataTable getHoaDon()
         {
-            DataTable dt = database.fillTable("select MaDH,MaKH,NgayDat,TongTien from DonHang");
+            DataTable dt = database.fillTable("select MaDH,MaKH,MaNV,NgayDat,TongTien from DonHang");
             dt.Columns[0].ColumnName = "Mã đơn hàng";
             dt.Columns[1].ColumnName = "Mã khách hàng";
-            dt.Columns[2].ColumnName = "Ngày mua";
-            dt.Columns[3].ColumnName = "Tổng tiền";
+            dt.Columns[2].ColumnName = "Mã nhân viên";
+            dt.Columns[3].ColumnName = "Ngày mua";
+            dt.Columns[4].ColumnName = "Tổng tiền";
             return dt;
         }
         public int themHD(DonHang dh)
         {
-            string sql = "INSERT INTO DonHang(MaDH, NgayDat, MaKH, TongTien) VALUES (N'" + dh.MaDH.Trim() + "'," +
-                "" + "'" + database.ConvertDateTime(dh.NgayDat.Trim()) + "',N'" + dh.MaKH + "'," + dh.TongTien + ")";
+            string sql = "INSERT INTO DonHang(MaDH, NgayDat, MaKH,MaNV, TongTien) VALUES (N'" + dh.MaDH.Trim() + "'," +
+                "" + "'" + database.ConvertDateTime(dh.NgayDat.Trim()) + "',N'" + dh.MaKH + "',N'" + dh.MaNV + "'," + dh.TongTien + ")";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }

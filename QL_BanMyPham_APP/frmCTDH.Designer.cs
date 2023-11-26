@@ -44,7 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSLCon = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtSoLuong);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtTenSP);
+            this.groupBox2.Controls.Add(this.txtMaSP);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtSLCon);
             this.groupBox2.Controls.Add(this.label13);
@@ -227,22 +227,22 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Số lương:";
             // 
-            // txtTenSP
+            // txtMaSP
             // 
-            this.txtTenSP.Enabled = false;
-            this.txtTenSP.Location = new System.Drawing.Point(600, 35);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(263, 20);
-            this.txtTenSP.TabIndex = 9;
+            this.txtMaSP.Enabled = false;
+            this.txtMaSP.Location = new System.Drawing.Point(600, 35);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(263, 20);
+            this.txtMaSP.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(538, 35);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.Size = new System.Drawing.Size(42, 13);
             this.label10.TabIndex = 8;
-            this.label10.Text = "Tên SP:";
+            this.label10.Text = "Mã SP:";
             // 
             // txtSLCon
             // 
@@ -345,7 +345,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTenSP;
+        private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtSLCon;
         private System.Windows.Forms.Label label13;

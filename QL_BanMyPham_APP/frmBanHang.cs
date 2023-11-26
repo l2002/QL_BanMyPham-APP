@@ -20,6 +20,15 @@ namespace QL_BanMyPham_APP
         KhachHang_BLL khBLL = new KhachHang_BLL();
         CTDH_BLL CTDH_BLL = new CTDH_BLL();
 
+        private string _tenNV;
+        private string _maNV;
+        public frmBanHang(string tenNV, string maNV) : this()
+        {
+            _tenNV = tenNV;
+            txtTenNV.Text = _tenNV;
+            _maNV = maNV;
+            txtMaNV.Text = _maNV;
+        }
         public frmBanHang()
         {
             InitializeComponent();
@@ -96,7 +105,7 @@ namespace QL_BanMyPham_APP
             dhDTO.MaDH = txtMaHD.Text;
             dhDTO.NgayDat = txtNgayDat.Text;
             dhDTO.MaKH = cboMaKH.SelectedValue.ToString();
-            
+            dhDTO.MaNV = txtMaNV.Text;
 
             if (btnTaoHDClicked)
             {
