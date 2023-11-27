@@ -56,11 +56,12 @@ create table SanPham
 )
 create table LoHang
 (
-	MaLo char(20) primary key,
+	MaLo char(20),
 	MaSP char(20),
 	MaNCC char(20),
 	NgayNhap date,
 	SoLuong int,
+	constraint PK_LoHang primary key(MaLo,MaSP),
 	constraint FK_LoHang_SanPham foreign key(MaSP) references SanPham,
 	constraint FK_LoHang_NhaCC foreign key(MaNCC) references NhaCC,
 )

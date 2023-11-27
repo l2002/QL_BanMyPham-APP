@@ -16,19 +16,16 @@ namespace QL_BanMyPham_APP
     public partial class frmSanPham : Form
     {
         SanPham spDTO = new SanPham();
+        LoHang loDTO = new LoHang();
         SanPham_BLL spBLL = new SanPham_BLL();
         LoaiHang_BLL lhBLL = new LoaiHang_BLL();
         ThuongHieu_BLL thBLL = new ThuongHieu_BLL();
+        LoHang_BLL lo_BLL = new LoHang_BLL();
+        NhaCC_BLL nccBLL = new NhaCC_BLL();
         public frmSanPham()
         {
             InitializeComponent();
-            txtMaSP.Enabled = false;
-            txtTenSP.Enabled = false;
-            txtHinhAnh.Enabled = false;
-            txtGiaBan.Enabled = false;
-            cboMaLoai.Enabled = false;
-            cboThuongHieu.Enabled = false;
-            dtpHSD.Enabled = false;
+            btnTaoLo.Enabled = false;
             btnLuu.Enabled = false;
         }
 
@@ -38,19 +35,14 @@ namespace QL_BanMyPham_APP
             string masp;
             if(dgvSanPham.RowCount < 10)
             {
-                masp = "SP0" + dgvSanPham.RowCount + date.Date.ToString("ddMMyyyy");
+                masp = "SP0" + dgvSanPham.RowCount + date.ToString("ddMMyyyyHHmmss");
             }    
             else
-                masp = "SP" + dgvSanPham.RowCount + date.Date.ToString("ddMMyyyy");
+                masp = "SP" + dgvSanPham.RowCount + date.ToString("ddMMyyyyHHmmss");
             txtMaSP.Text = masp;
-            txtTenSP.Enabled = true;
-            txtHinhAnh.Enabled = true;
-            txtGiaBan.Enabled = true;
-            cboMaLoai.Enabled = true;
-            cboThuongHieu.Enabled = true;
-            dtpHSD.Enabled = true;
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
+            btnTaoLo.Enabled = true;
         }
 
         private void frmSanPham_Load(object sender, EventArgs e)
@@ -58,6 +50,8 @@ namespace QL_BanMyPham_APP
             loadData();
             loadLoaiHang();
             loadThuongHieu();
+            loadLoHang();
+            loadNCC();
         }
         private void loadLoaiHang()
         {
@@ -65,15 +59,34 @@ namespace QL_BanMyPham_APP
             cboMaLoai.DisplayMember = "TenLoai";
             cboMaLoai.DataSource = lhBLL.GetListLoaiHang();
         }
+        private void loadNCC()
+        {
+            cboNCC.ValueMember = "MaNCC";
+            cboNCC.DisplayMember = "TenNCC";
+            cboNCC.DataSource = nccBLL.getListNCC();
+        }
         private void loadThuongHieu()
         {
             cboThuongHieu.DisplayMember = "TenTH";
             cboThuongHieu.ValueMember = "MaTH";
             cboThuongHieu.DataSource = thBLL.GetListThuongHieu();
         }
+        private void loadLoHang()
+        {
+            cboLo.DisplayMember = "MaLo";
+            cboLo.ValueMember = "MaLo";
+            cboLo.DataSource = lo_BLL.getListLoHang();
+            cboMaLo.DisplayMember = "MaLo";
+            cboMaLo.ValueMember = "MaLo";
+            cboMaLo.DataSource = lo_BLL.getListLoHang();
+        }
         private void loadData()
         {
-            dgvSanPham.DataSource = spBLL.getSanPham();
+            if(cboLo.SelectedIndex != -1)
+            {
+                string malo = cboLo.SelectedValue.ToString();
+                dgvSanPham.DataSource = lo_BLL.getLoHang(malo);
+            }    
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -89,6 +102,11 @@ namespace QL_BanMyPham_APP
                 spDTO.HinhAnh = txtHinhAnh.Text;
                 spDTO.HSD = dtpHSD.Text;
                 spDTO.GiaBan = float.Parse(txtGiaBan.Text);
+                loDTO.MaLo = cboMaLo.SelectedValue.ToString();
+                loDTO.MaSP = txtMaSP.Text;
+                loDTO.MaNCC = cboNCC.SelectedValue.ToString();
+                loDTO.NgayNhap = dtpNgayNhap.Text;
+                loDTO.SoLuong = (int)numSL.Value;
                 if (spBLL.timSanPham(txtMaSP.Text) == 1)
                 {
                     if (spBLL.suaSanPham(spDTO) != -1)
@@ -111,6 +129,16 @@ namespace QL_BanMyPham_APP
                         MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
                     }
                 }
+                if (cboLo.SelectedValue.ToString() == cboMaLo.SelectedValue.ToString())
+                {
+                    lo_BLL.themLoHang(loDTO);
+                    
+                }
+                else
+                {
+                    lo_BLL.suaLoHang(loDTO, cboLo.SelectedValue.ToString());
+                }
+                
                 btnThem.Enabled = true;
                 btnLuu.Enabled = false;
                 clearTextBox();
@@ -143,10 +171,13 @@ namespace QL_BanMyPham_APP
                     txtMaSP.Text = dgvSanPham.CurrentRow.Cells[0].Value.ToString();
                     txtTenSP.Text = dgvSanPham.CurrentRow.Cells[1].Value.ToString();
                     cboMaLoai.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
-                    cboThuongHieu.Text = dgvSanPham.CurrentRow.Cells[4].Value.ToString();
-                    dtpHSD.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
-                    txtHinhAnh.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();
-                    txtGiaBan.Text = dgvSanPham.CurrentRow.Cells[7].Value.ToString();
+                    cboThuongHieu.Text = dgvSanPham.CurrentRow.Cells[3].Value.ToString();
+                    dtpHSD.Text = dgvSanPham.CurrentRow.Cells[4].Value.ToString();
+                    txtHinhAnh.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
+                    txtGiaBan.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();
+                    cboNCC.Text = dgvSanPham.CurrentRow.Cells[7].Value.ToString();
+                    numSL.Value = int.Parse(dgvSanPham.CurrentRow.Cells[8].Value.ToString());
+                    dtpNgayNhap.Text = dgvSanPham.CurrentRow.Cells[9].Value.ToString();
                 }
             }
             catch
@@ -166,7 +197,8 @@ namespace QL_BanMyPham_APP
                 var n = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (n == DialogResult.Yes)
                 {
-                    if (spBLL.xoaSanPham(txtMaSP.Text) != -1)
+                    string malo = cboLo.SelectedValue.ToString();
+                    if (lo_BLL.xoaLoHang(malo, txtMaSP.Text)!=-1 && spBLL.xoaSanPham(txtMaSP.Text) != -1)
                     {
                         MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK);
                     }
@@ -175,6 +207,7 @@ namespace QL_BanMyPham_APP
                         MessageBox.Show("Xóa thất bại", "Thông báo", MessageBoxButtons.OK);
                     }
                     loadData();
+                    loadLoHang();
                 }
             }
         }
@@ -191,6 +224,55 @@ namespace QL_BanMyPham_APP
                 txtHinhAnh.Text = imagename;
                 open.RestoreDirectory = true;
             }
+        }
+
+
+        private void btnTaoLo_Click(object sender, EventArgs e)
+        {
+            if (checkTextBox())
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                string malo;
+                if (lo_BLL.getLoHangCount() < 10)
+                {
+                    malo = "L0" + (lo_BLL.getLoHangCount()+1).ToString();
+                }
+                else
+                    malo = "L" + (lo_BLL.getLoHangCount()+1).ToString();
+                spDTO.MaSP = txtMaSP.Text;
+                spDTO.TenSP = txtTenSP.Text;
+                spDTO.MaLoai = cboMaLoai.SelectedValue.ToString();
+                spDTO.MaTH = cboThuongHieu.SelectedValue.ToString();
+                spDTO.HinhAnh = txtHinhAnh.Text;
+                spDTO.HSD = dtpHSD.Text;
+                spDTO.GiaBan = float.Parse(txtGiaBan.Text);
+                spBLL.themSanPham(spDTO);
+                loDTO.MaLo = malo;
+                loDTO.MaSP = txtMaSP.Text;
+                loDTO.MaNCC = cboNCC.SelectedValue.ToString();
+                loDTO.NgayNhap = dtpNgayNhap.Text;
+                loDTO.SoLuong = (int)numSL.Value;
+                if (lo_BLL.themLoHang(loDTO) != -1)
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                }
+                clearTextBox();
+                loadData();
+                loadLoHang();
+                btnTaoLo.Enabled = false;
+                btnThem.Enabled = true;
+                btnLuu.Enabled = false;
+            }
+        }
+
+        private void cboLo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }
