@@ -135,6 +135,28 @@ namespace QL_BanMyPham_APP
 
         private void dgvDH_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnHuyHD_Click(object sender, EventArgs e)
+        {
+            if (txtMaHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn Mã Hóa đơn!");
+                return;
+            }
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CTDH_BLL.xoaCTDH(txtMaHD.Text);
+
+                dhBLL.xoaDH(txtMaHD.Text);
+                MessageBox.Show("Hủy thành công!");
+            }
+            loadTable();
+        }
+
+        private void dgvDH_SelectionChanged(object sender, EventArgs e)
+        {
             try
             {
                 txtMaHD.Text = dgvDH.CurrentRow.Cells[0].Value.ToString();
@@ -146,21 +168,6 @@ namespace QL_BanMyPham_APP
             {
                 return;
             }
-        }
-
-        private void btnHuyHD_Click(object sender, EventArgs e)
-        {
-           
-                if (CTDH_BLL.xoaCTDH(txtMaHD.Text) == 1)
-                {
-                    dhBLL.xoaDH(txtMaHD.Text);
-                    MessageBox.Show("Xóa thành công!");
-                }
-                else
-                {
-                MessageBox.Show("Xóa thất bại!");
-            }
-            loadTable();
         }
     }
 }

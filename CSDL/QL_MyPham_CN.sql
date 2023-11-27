@@ -1,4 +1,4 @@
-Create database QL_MyPham_DA
+﻿Create database QL_MyPham_DA
 GO
 Use QL_MyPham_DA
 GO
@@ -160,6 +160,24 @@ AS
 		SET TONGTIEN= @TONGMOI WHERE MaDH=(SELECT MaDH FROM inserted)
 	END
 
+--Cập nhật lại số lượng cho các mặt hàng khi xóa số lượng hàng mua trong CTHD
+CREATE TRIGGER UPDATE_XOAHANG ON CTDonHang AFTER DELETE 
+AS
+	BEGIN
+		DECLARE @sl int
+		declare @slxoa int
+		declare @slcon int
+
+		select @slxoa=(select SoLuongMua from deleted)
+		select @sl=(select LoHang.SoLuong from LoHang,SanPham JOIN deleted ON SanPham.MaSP=deleted.MaSP where LoHang.MaSP=SanPham.MaSP)
+		select @slcon=@sl+@slxoa
+
+		UPDATE LoHang
+		SET LoHang.SoLuong= @slcon from LoHang,SanPham join deleted on SanPham.MaSP=deleted.MaSP where LoHang.MaSP=SanPham.MaSP
+	END
+
+select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP=LoHang.MaSP
+
 create proc Delete_CTHDBAN_Func @mahdban char(30),@mahangxoa char(30)
 as
 begin
@@ -179,7 +197,6 @@ SELECT TONGTIEN FROM DonHang WHERE MaDH =N'HDB11222023_133423'
 
 select * from DonHang
 select * from CTDonHang
-select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='SP02' and SanPham.MaSP=LoHang.MaSP
 
 exec Delete_CTHDBAN_Func 'HDB11242023_144523', N'SP03'
 
@@ -189,3 +206,6 @@ delete from CTDonHang
 select * from NhanVien
 select * from TAIKHOAN
 select NhanVien.TenNV,NhanVien.MaNV from TAIKHOAN,NhanVien where TAIKHOAN.MaNV=NhanVien.MaNV and TAIKHOAN.sTaiKhoan='Vang'
+
+select * from CTDonHang
+select * from DatHang

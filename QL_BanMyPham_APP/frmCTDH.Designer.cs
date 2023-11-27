@@ -114,7 +114,7 @@
             // 
             this.btnThemSP.BackColor = System.Drawing.Color.Blue;
             this.btnThemSP.ForeColor = System.Drawing.Color.White;
-            this.btnThemSP.Location = new System.Drawing.Point(1095, 194);
+            this.btnThemSP.Location = new System.Drawing.Point(1085, 186);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(147, 50);
             this.btnThemSP.TabIndex = 25;
@@ -247,9 +247,10 @@
             // txtSLCon
             // 
             this.txtSLCon.Enabled = false;
+            this.txtSLCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLCon.Location = new System.Drawing.Point(149, 186);
             this.txtSLCon.Name = "txtSLCon";
-            this.txtSLCon.Size = new System.Drawing.Size(263, 20);
+            this.txtSLCon.Size = new System.Drawing.Size(91, 38);
             this.txtSLCon.TabIndex = 3;
             // 
             // label13
@@ -285,7 +286,7 @@
             this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDong.Location = new System.Drawing.Point(612, 713);
+            this.btnDong.Location = new System.Drawing.Point(587, 713);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(187, 60);
             this.btnDong.TabIndex = 26;
@@ -295,10 +296,11 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Enabled = false;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(1076, 713);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(263, 26);
+            this.txtTongTien.Size = new System.Drawing.Size(312, 38);
             this.txtTongTien.TabIndex = 44;
             // 
             // label4

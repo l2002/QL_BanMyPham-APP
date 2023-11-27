@@ -37,9 +37,10 @@ namespace DAL
             string kq = database.GetFieldValues(sql);
             return kq;
         }
-        public int xoaDH(string madh)
+        public int xoaHoaDon(string madh)
         {
-            string sql = "delete \r\nFROM DonHang\r\nWHERE EXISTS \r\n(SELECT *\r\nFROM CTDonHang\r\nWHERE CTDonHang.MaDH = DonHang.MaDH\r\nAND DonHang.MaDH = '"+madh+"');";
+            string sql;
+            sql = "delete FROM DonHang WHERE MaDH = '" + madh + "'";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }

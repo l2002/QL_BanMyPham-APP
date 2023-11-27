@@ -31,6 +31,8 @@
             this.btnThemHD = new System.Windows.Forms.Button();
             this.cboMaKH = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtNgayDat = new System.Windows.Forms.DateTimePicker();
             this.btnTaoHD = new System.Windows.Forms.Button();
             this.txtSĐTKH = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvDH = new System.Windows.Forms.DataGridView();
             this.btnHuyHD = new System.Windows.Forms.Button();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDH)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +103,23 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông rin chung(Hóa đơn bán)";
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(151, 145);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(263, 20);
+            this.txtMaNV.TabIndex = 42;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(89, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Mã NV:";
             // 
             // txtNgayDat
             // 
@@ -259,35 +276,19 @@
             this.dgvDH.Name = "dgvDH";
             this.dgvDH.Size = new System.Drawing.Size(1342, 408);
             this.dgvDH.TabIndex = 43;
+            this.dgvDH.SelectionChanged += new System.EventHandler(this.dgvDH_SelectionChanged);
             this.dgvDH.Click += new System.EventHandler(this.dgvDH_Click);
             // 
             // btnHuyHD
             // 
             this.btnHuyHD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHuyHD.Location = new System.Drawing.Point(583, 712);
+            this.btnHuyHD.Location = new System.Drawing.Point(573, 705);
             this.btnHuyHD.Name = "btnHuyHD";
             this.btnHuyHD.Size = new System.Drawing.Size(187, 49);
             this.btnHuyHD.TabIndex = 25;
             this.btnHuyHD.Text = "HỦY HÓA ĐƠN";
             this.btnHuyHD.UseVisualStyleBackColor = true;
             this.btnHuyHD.Click += new System.EventHandler(this.btnHuyHD_Click);
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Enabled = false;
-            this.txtMaNV.Location = new System.Drawing.Point(151, 145);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(263, 20);
-            this.txtMaNV.TabIndex = 42;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(89, 145);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Mã NV:";
             // 
             // frmBanHang
             // 

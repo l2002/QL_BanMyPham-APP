@@ -34,7 +34,7 @@ namespace BLL
         }
         public int xoaDH(string madh)
         {
-            return dhAccess.xoaDH(madh);
+            return dhAccess.xoaHoaDon(madh);
         }
     }
 }

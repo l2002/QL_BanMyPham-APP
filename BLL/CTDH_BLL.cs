@@ -30,9 +30,9 @@ namespace BLL
         {         
             return ctdhAccess.ktSPDaCo(ctdh);
         }
-        public int xoaCTDH(string madh)
+        public void xoaCTDH(string madh)
         {
-            return ctdhAccess.xoaCTDH(madh);
+            ctdhAccess.xoaCTDH(madh);
         }
         public int xoaSP_CTDH(string madh,string maSP)
         {

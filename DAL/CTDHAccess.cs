@@ -44,7 +44,8 @@ namespace DAL
         }
         public int xoaCTDH(string madh)
         {
-            string sql = "delete from CTDonHang where MaDH = '" + madh + "'";
+            string sql;
+            sql = "delete from CTDonHang where MaDH = '" + madh + "'";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }

@@ -42,12 +42,12 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblMaNV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.avt = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pnLoad = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblMaNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
@@ -224,6 +224,17 @@
             this.panel2.Size = new System.Drawing.Size(250, 181);
             this.panel2.TabIndex = 1;
             // 
+            // lblMaNV
+            // 
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.ForeColor = System.Drawing.Color.Aqua;
+            this.lblMaNV.Location = new System.Drawing.Point(68, 110);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(100, 24);
+            this.lblMaNV.TabIndex = 6;
+            this.lblMaNV.Text = "Xin chào:";
+            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -263,17 +274,6 @@
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(1366, 776);
             this.pnLoad.TabIndex = 6;
-            // 
-            // lblMaNV
-            // 
-            this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaNV.ForeColor = System.Drawing.Color.Aqua;
-            this.lblMaNV.Location = new System.Drawing.Point(68, 110);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(100, 24);
-            this.lblMaNV.TabIndex = 6;
-            this.lblMaNV.Text = "Xin chào:";
             // 
             // frmMain
             // 
