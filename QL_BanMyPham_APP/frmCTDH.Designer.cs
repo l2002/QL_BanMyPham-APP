@@ -267,9 +267,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(87, 135);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 13);
+            this.label14.Size = new System.Drawing.Size(46, 13);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Mã SP:";
+            this.label14.Text = "Tên SP:";
             // 
             // dgvDS
             // 
@@ -278,7 +278,7 @@
             this.dgvDS.Name = "dgvDS";
             this.dgvDS.Size = new System.Drawing.Size(1376, 362);
             this.dgvDS.TabIndex = 24;
-            this.dgvDS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDS_CellContentClick);
+            this.dgvDS.SelectionChanged += new System.EventHandler(this.dgvDS_SelectionChanged);
             this.dgvDS.DoubleClick += new System.EventHandler(this.dgvDS_DoubleClick);
             // 
             // btnDong

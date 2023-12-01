@@ -24,5 +24,23 @@ namespace DAL
             }
             return list;
         }
+        public int themThuongHieu(ThuongHieu th)
+        {
+            string sql = "insert into ThuongHieu values('" + th.MaTH + "',N'" + th.TenTH + "')";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
+        public int suaThuongHieu(ThuongHieu th)
+        {
+            string sql = "update ThuongHieu set tenth=N'" + th.TenTH + "' where math = '" + th.MaTH + "'";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
+        public int xoaThuongHieu(string math)
+        {
+            string sql = "delete ThuongHieu where math = '" + math + "'";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
     }
 }

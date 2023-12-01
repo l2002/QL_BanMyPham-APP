@@ -11,6 +11,7 @@ namespace DTO
         public string MaTK { get; set; }
         public string TenTK { get; set; }
         public string MatKhau { get; set; }
+        public string Email { get; set; }
         public string MaQuyen { get; set; }
         public string MaNV { get; set; }
     }

@@ -133,36 +133,55 @@ namespace QL_BanMyPham_APP
             txtTongTien.Text = dhBLL.getTongTien(txtMaHD.Text).ToString();
         }
 
-        private void dgvDH_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnHuyHD_Click(object sender, EventArgs e)
         {
-            if (txtMaHD.Text == "")
+            try
             {
-                MessageBox.Show("Vui lòng chọn Mã Hóa đơn!");
-                return;
-            }
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                CTDH_BLL.xoaCTDH(txtMaHD.Text);
+                if (txtMaHD.Text == "")
+                {
+                    MessageBox.Show("Vui lòng chọn Mã Hóa đơn!");
+                    return;
+                }
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CTDH_BLL.xoaCTDH(txtMaHD.Text);
 
-                dhBLL.xoaDH(txtMaHD.Text);
-                MessageBox.Show("Hủy thành công!");
+                    dhBLL.xoaDH(txtMaHD.Text);
+                    MessageBox.Show("Hủy thành công!");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Hủy thất bại!");
             }
             loadTable();
+        }
+
+        private void cboMaKH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
 
         private void dgvDH_SelectionChanged(object sender, EventArgs e)
         {
             try
             {
-                txtMaHD.Text = dgvDH.CurrentRow.Cells[0].Value.ToString();
-                cboMaKH.SelectedValue = dgvDH.CurrentRow.Cells[1].Value.ToString();
-                txtNgayDat.Text = dgvDH.CurrentRow.Cells[2].Value.ToString();
-                txtTongTien.Text = dgvDH.CurrentRow.Cells[3].Value.ToString();
+                if (dgvDH.RowCount == 1)
+                    return;
+                else if (dgvDH.CurrentRow != null && dgvDH.CurrentRow.Index < dgvDH.Rows.Count - 1)
+                {
+                    txtMaHD.Text = dgvDH.CurrentRow.Cells[0].Value.ToString();
+                    cboMaKH.SelectedValue = dgvDH.CurrentRow.Cells[1].Value.ToString();
+                    //txtMaNV.Text = dgvDH.CurrentRow.Cells[2].Value.ToString();
+                    //txtTenNV.Text = dgvDH.CurrentRow.Cells[3].Value.ToString(); 
+                    txtNgayDat.Text = dgvDH.CurrentRow.Cells[4].Value.ToString();
+                    txtTongTien.Text = dgvDH.CurrentRow.Cells[5].Value.ToString();
+                }
             }
             catch
             {

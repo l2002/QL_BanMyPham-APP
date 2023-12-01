@@ -56,11 +56,12 @@ create table SanPham
 )
 create table LoHang
 (
-	MaLo char(20) primary key,
+	MaLo char(20),
 	MaSP char(20),
 	MaNCC char(20),
 	NgayNhap date,
 	SoLuong int,
+	constraint PK_LoHang primary key(MaLo,MaSP),
 	constraint FK_LoHang_SanPham foreign key(MaSP) references SanPham,
 	constraint FK_LoHang_NhaCC foreign key(MaNCC) references NhaCC,
 )
@@ -110,7 +111,7 @@ create table CTDonHang
 
 -----------------Login--------------------
 CREATE TABLE TAIKHOAN (
-  sMaTK INT IDENTITY(1,1) NOT NULL ,
+  sMaTK char(10) NOT NULL ,
   sTaiKhoan NVARCHAR(50) NOT NULL,
   sMatKhau NVARCHAR(50) NOT NULL,
   Email VARCHAR(50),
@@ -161,21 +162,16 @@ AS
 	END
 
 --Cập nhật lại số lượng cho các mặt hàng khi xóa số lượng hàng mua trong CTHD
-CREATE TRIGGER UPDATE_XOAHANG ON CTDonHang AFTER DELETE 
+CREATE TRIGGER UPDATE_AFTERXoaSP_TRIGGER ON CTDonHang AFTER DELETE 
 AS
 	BEGIN
-		DECLARE @sl int
-		declare @slxoa int
-		declare @slcon int
-
-		select @slxoa=(select SoLuongMua from deleted)
-		select @sl=(select LoHang.SoLuong from LoHang,SanPham JOIN deleted ON SanPham.MaSP=deleted.MaSP where LoHang.MaSP=SanPham.MaSP)
-		select @slcon=@sl+@slxoa
-
 		UPDATE LoHang
-		SET LoHang.SoLuong= @slcon from LoHang,SanPham join deleted on SanPham.MaSP=deleted.MaSP where LoHang.MaSP=SanPham.MaSP
+		SET SOLUONG=SOLUONG+(SELECT SOLUONGMUA FROM deleted WHERE MaSP=LoHang.MaSP)
+		FROM LoHang
+		JOIN deleted ON LoHang.MaSP=deleted.MaSP
 	END
 
+drop trigger UPDATE_AFTERXoaSP_TRIGGER
 select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP=LoHang.MaSP
 
 create proc Delete_CTHDBAN_Func @mahdban char(30),@mahangxoa char(30)
@@ -209,3 +205,10 @@ select NhanVien.TenNV,NhanVien.MaNV from TAIKHOAN,NhanVien where TAIKHOAN.MaNV=N
 
 select * from CTDonHang
 select * from DatHang
+select * from QUYEN
+select * from TAIKHOAN
+
+delete CTDonHang from CTDonHang,SanPham where SanPham.MaSP=CTDonHang.MaSP and MaDH= 'HDB11302023_102210    '
+delete FROM DonHang WHERE MaDH = 'HDB11302023_102210  '
+
+insert into TaiKhoan(sMaTK,sTaiKhoan,sMatKhau,Email,iMaQuyen,MaNV) values('3',N'Thien','123','thien@gmail.com','1','NV03')

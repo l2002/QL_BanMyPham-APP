@@ -31,7 +31,6 @@ namespace QL_BanMyPham_APP
         {
             _maDH = maDH;
             txtMaDH.Text = _maDH;
-
         }
         public frmCTDH()
         {
@@ -213,14 +212,30 @@ namespace QL_BanMyPham_APP
 
         }
 
-        private void dgvDS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnXoaSP_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnXoaSP_Click(object sender, EventArgs e)
+        private void dgvDS_SelectionChanged(object sender, EventArgs e)
         {
+            try
+            {
+                cboMaSP.SelectedValue= dgvDS.CurrentRow.Cells[1].Value.ToString();
+                txtMaSP.Text = dgvDS.CurrentRow.Cells[2].Value.ToString();
+                txtSoLuong.Text = dgvDS.CurrentRow.Cells[3].Value.ToString();
+                txtHSD.Text = dgvDS.CurrentRow.Cells[4].Value.ToString();
+                txtGiaBan.Text = dgvDS.CurrentRow.Cells[5].Value.ToString();
+                txtKhuyenMai.Text = dgvDS.CurrentRow.Cells[6].Value.ToString();
+                txtThanhTien.Text = dgvDS.CurrentRow.Cells[7].Value.ToString();
 
+                string str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
+                txtSLCon.Text = ctdhBLL.GetFieldValues(str);
+            }
+            catch
+            {
+                return;
+            }
         }
     }
 }

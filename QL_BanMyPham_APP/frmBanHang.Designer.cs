@@ -74,6 +74,7 @@
             this.cboMaKH.Name = "cboMaKH";
             this.cboMaKH.Size = new System.Drawing.Size(263, 21);
             this.cboMaKH.TabIndex = 12;
+            this.cboMaKH.SelectedIndexChanged += new System.EventHandler(this.cboMaKH_SelectedIndexChanged);
             this.cboMaKH.TextChanged += new System.EventHandler(this.cboMaKH_TextChanged);
             // 
             // groupBox1
@@ -277,7 +278,6 @@
             this.dgvDH.Size = new System.Drawing.Size(1342, 408);
             this.dgvDH.TabIndex = 43;
             this.dgvDH.SelectionChanged += new System.EventHandler(this.dgvDH_SelectionChanged);
-            this.dgvDH.Click += new System.EventHandler(this.dgvDH_Click);
             // 
             // btnHuyHD
             // 

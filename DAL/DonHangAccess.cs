@@ -15,12 +15,13 @@ namespace DAL
        
         public DataTable getHoaDon()
         {
-            DataTable dt = database.fillTable("select MaDH,MaKH,MaNV,NgayDat,TongTien from DonHang");
+            DataTable dt = database.fillTable("select MaDH,MaKH,DonHang.MaNV,TenNV,NgayDat,TongTien from DonHang,NhanVien where NhanVien.MaNV=DonHang.MaNV");
             dt.Columns[0].ColumnName = "Mã đơn hàng";
             dt.Columns[1].ColumnName = "Mã khách hàng";
             dt.Columns[2].ColumnName = "Mã nhân viên";
-            dt.Columns[3].ColumnName = "Ngày mua";
-            dt.Columns[4].ColumnName = "Tổng tiền";
+            dt.Columns[3].ColumnName = "Tên nhân viên";
+            dt.Columns[4].ColumnName = "Ngày mua";
+            dt.Columns[5].ColumnName = "Tổng tiền";
             return dt;
         }
         public int themHD(DonHang dh)

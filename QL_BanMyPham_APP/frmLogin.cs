@@ -32,11 +32,15 @@ namespace QL_BanMyPham_APP
                 MessageBox.Show("Đăng nhập thành công");
                 frmMain Child = new frmMain(tkBLL.getTenNV(txtTaiKhoan.Text), tkBLL.getMaNV(txtTaiKhoan.Text));
                 Child.Show();
+                frmLogin frm=new frmLogin();
+                frm.Close();
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc Mật khẩu không đúng!");
+                return;
             }
+            
         }
     }
 }

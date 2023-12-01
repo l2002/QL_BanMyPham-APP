@@ -15,5 +15,17 @@ namespace BLL
         {
             return thAccess.getListThuongHieu();
         }
+        public int themThuongHieu(ThuongHieu th)
+        {
+            return thAccess.themThuongHieu(th);
+        }
+        public int suaThuongHieu(ThuongHieu th)
+        {
+            return thAccess.suaThuongHieu(th);
+        }
+        public int xoaThuongHieu(string math)
+        {
+            return thAccess.xoaThuongHieu(math);
+        }
     }
 }
