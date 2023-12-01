@@ -24,5 +24,23 @@ namespace DAL
             }
             return list;
         }
+        public int themNhaCC(NhaCC ncc)
+        {
+            string sql = "insert into NhaCC values('" + ncc.MaNCC + "',N'" + ncc.TenNCC + "')";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
+        public int suaNhaCC(NhaCC ncc)
+        {
+            string sql = "update NhaCC set tenncc=N'" + ncc.TenNCC + "' where mancc = '" + ncc.MaNCC + "'";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
+        public int xoaNhaCC(string mancc)
+        {
+            string sql = "delete NhaCC where mancc = '" + mancc + "'";
+            int kq = database.excuteNonQuery(sql);
+            return kq;
+        }
     }
 }
