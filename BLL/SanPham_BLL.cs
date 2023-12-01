@@ -43,5 +43,21 @@ namespace BLL
         {
             return spAccess.timSanPham(masp);
         }
+        public int updateKM(string masp, string makm)
+        {
+            return spAccess.updateKM(masp, makm);
+        }
+        public DataTable timSP_NhieuGiaTri(string tensp, float giaban, bool chuakm)
+        {
+            return spAccess.timSP_NhieuGiaTri(tensp,giaban,chuakm);
+        }
+        public int suaKM(string makm, string makmsua)
+        {
+            return spAccess.suaKM(makm,makmsua);
+        }
+        public int xoakm(string masp)
+        {
+            return spAccess.xoakm(masp);
+        }
     }
 }

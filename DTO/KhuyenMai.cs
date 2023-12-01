@@ -9,6 +9,6 @@ namespace DTO
     public class KhuyenMai
     {
         public string MaKM { get; set; }
-        public string TenKM { get; set; }
+        public int TenKM { get; set; }
     }
 }

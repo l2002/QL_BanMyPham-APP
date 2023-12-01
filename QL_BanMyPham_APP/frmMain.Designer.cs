@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnKhuyenMai = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnNCCHSX = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnKhuyenMai);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnHoaDon);
             this.panel1.Controls.Add(this.btnNCCHSX);
@@ -89,7 +89,7 @@
             this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Aqua;
-            this.button3.Location = new System.Drawing.Point(26, 696);
+            this.button3.Location = new System.Drawing.Point(27, 777);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 53);
             this.button3.TabIndex = 5;
@@ -102,7 +102,7 @@
             this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Aqua;
-            this.button5.Location = new System.Drawing.Point(26, 622);
+            this.button5.Location = new System.Drawing.Point(27, 701);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(183, 53);
             this.button5.TabIndex = 4;
@@ -110,18 +110,18 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.btnNCCHSX_Click);
             // 
-            // button4
+            // btnKhuyenMai
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Aqua;
-            this.button4.Location = new System.Drawing.Point(26, 622);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 53);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Khuyến Mại";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.btnNCCHSX_Click);
+            this.btnKhuyenMai.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhuyenMai.ForeColor = System.Drawing.Color.Aqua;
+            this.btnKhuyenMai.Location = new System.Drawing.Point(27, 619);
+            this.btnKhuyenMai.Name = "btnKhuyenMai";
+            this.btnKhuyenMai.Size = new System.Drawing.Size(183, 53);
+            this.btnKhuyenMai.TabIndex = 4;
+            this.btnKhuyenMai.Text = "Khuyến Mại";
+            this.btnKhuyenMai.UseVisualStyleBackColor = false;
+            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
             // button2
             // 
@@ -318,7 +318,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnKhuyenMai;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMaNV;
     }

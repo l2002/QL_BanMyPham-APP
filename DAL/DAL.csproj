@@ -49,7 +49,10 @@
     <Compile Include="DatHangAccess.cs" />
     <Compile Include="DonHangAccess.cs" />
     <Compile Include="KhachHangAccesss.cs" />
+    <Compile Include="KhuyenMaiAccess.cs" />
     <Compile Include="LoaiHangAccess.cs" />
+    <Compile Include="LoHangAccess.cs" />
+    <Compile Include="NhaCCAccess.cs" />
     <Compile Include="NhanVienAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPhamAccess.cs" />
