@@ -1,4 +1,4 @@
-namespace QL_BanMyPham_APP
+﻿namespace QL_BanMyPham_APP
 {
     partial class frmThuongHieu
     {

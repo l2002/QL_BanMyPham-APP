@@ -64,7 +64,14 @@ namespace QL_BanMyPham_APP
 
         private void btnNCCHSX_Click(object sender, EventArgs e)
         {
-            
+            btnNCCHSX.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "NCC&HSX";
+            this.pnLoad.Controls.Clear();
+            frmThuongHieu frm = new frmThuongHieu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
@@ -99,18 +106,6 @@ namespace QL_BanMyPham_APP
             lblTitle.Text = "Sản Phẩm";
             this.pnLoad.Controls.Clear();
             frmSanPham frm = new frmSanPham() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.pnLoad.Controls.Add(frm);
-            frm.Show();
-        }
-
-        private void btnKhuyenMai_Click(object sender, EventArgs e)
-        {
-            btnSP.BackColor = Color.FromArgb(46, 51, 73);
-
-            lblTitle.Text = "Khuyến Mãi";
-            this.pnLoad.Controls.Clear();
-            frmKhuyenMai frm = new frmKhuyenMai() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();

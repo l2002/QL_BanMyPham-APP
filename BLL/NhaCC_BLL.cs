@@ -16,5 +16,17 @@ namespace BLL
         {
             return ncc.getListNhaCC();
         }
+        public int themNhaCC(NhaCC ncc)
+        {
+            return nccAccess.themNhaCC(ncc);
+        }
+        public int suaNhaCC(NhaCC ncc)
+        {
+            return nccAccess.suaNhaCC(ncc);
+        }
+        public int xoaNhaCC(string mancc)
+        {
+            return nccAccess.xoaNhaCC(mancc);
+        }
     }
 }
