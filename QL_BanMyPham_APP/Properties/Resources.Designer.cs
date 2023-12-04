@@ -63,6 +63,16 @@ namespace QL_BanMyPham_APP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aboutus_2 {
+            get {
+                object obj = ResourceManager.GetObject("aboutus-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap co_nen_mo_cua_hang_ban_my_pham {
             get {
                 object obj = ResourceManager.GetObject("co-nen-mo-cua-hang-ban-my-pham", resourceCulture);
@@ -73,9 +83,49 @@ namespace QL_BanMyPham_APP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap co_nen_mo_cua_hang_ban_my_pham1 {
+            get {
+                object obj = ResourceManager.GetObject("co-nen-mo-cua-hang-ban-my-pham1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ffbdcbe3_shop_ban_my_pham_noi_dia_trung_uy_tin_tren_shopee {
+            get {
+                object obj = ResourceManager.GetObject("ffbdcbe3-shop-ban-my-pham-noi-dia-trung-uy-tin-tren-shopee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ffbdcbe3_shop_ban_my_pham_noi_dia_trung_uy_tin_tren_shopee1 {
+            get {
+                object obj = ResourceManager.GetObject("ffbdcbe3-shop-ban-my-pham-noi-dia-trung-uy-tin-tren-shopee1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap my_pham_noi_dia_trung_12_min {
+            get {
+                object obj = ResourceManager.GetObject("my-pham-noi-dia-trung-12-min", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

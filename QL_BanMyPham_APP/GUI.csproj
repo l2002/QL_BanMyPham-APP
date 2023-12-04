@@ -199,7 +199,10 @@
     <None Include="Resources\co-nen-mo-cua-hang-ban-my-pham.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\aboutus-2.png" />
+    <Content Include="Resources\ffbdcbe3-shop-ban-my-pham-noi-dia-trung-uy-tin-tren-shopee.jpg" />
     <Content Include="Resources\login.jpg" />
+    <Content Include="Resources\my-pham-noi-dia-trung-12-min.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

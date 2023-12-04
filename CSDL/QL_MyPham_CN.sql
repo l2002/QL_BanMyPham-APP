@@ -235,5 +235,4 @@ GROUP BY KhachHang.TenKH
 ORDER BY TongTien DESC 
 
 
- SELECT TOP  PERCENT * FROM KhachHang; 
 

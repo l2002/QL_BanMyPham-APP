@@ -137,7 +137,12 @@ namespace QL_BanMyPham_APP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            button5.BackColor = Color.FromArgb(46, 51, 73);
+
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Báo Cáo";
             this.pnLoad.Controls.Clear();

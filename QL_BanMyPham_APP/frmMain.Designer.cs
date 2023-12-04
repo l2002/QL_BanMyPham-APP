@@ -32,7 +32,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnKhuyenMai = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnBaoCao);
             this.panel1.Controls.Add(this.btnKhuyenMai);
             this.panel1.Controls.Add(this.btnTaiKhoan);
             this.panel1.Controls.Add(this.btnHoaDon);
@@ -90,7 +90,7 @@
             this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Aqua;
-            this.button3.Location = new System.Drawing.Point(27, 777);
+            this.button3.Location = new System.Drawing.Point(28, 765);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 53);
             this.button3.TabIndex = 5;
@@ -98,25 +98,25 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button5
+            // btnBaoCao
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Aqua;
-            this.button5.Location = new System.Drawing.Point(27, 701);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 53);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Báo cáo";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnBaoCao.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.Color.Aqua;
+            this.btnBaoCao.Location = new System.Drawing.Point(28, 689);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(183, 53);
+            this.btnBaoCao.TabIndex = 4;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = false;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnKhuyenMai
             // 
             this.btnKhuyenMai.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuyenMai.ForeColor = System.Drawing.Color.Aqua;
-            this.btnKhuyenMai.Location = new System.Drawing.Point(27, 619);
+            this.btnKhuyenMai.Location = new System.Drawing.Point(28, 607);
             this.btnKhuyenMai.Name = "btnKhuyenMai";
             this.btnKhuyenMai.Size = new System.Drawing.Size(183, 53);
             this.btnKhuyenMai.TabIndex = 4;
@@ -129,7 +129,7 @@
             this.btnTaiKhoan.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaiKhoan.ForeColor = System.Drawing.Color.Aqua;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(26, 539);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(27, 527);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(183, 53);
             this.btnTaiKhoan.TabIndex = 4;
@@ -142,7 +142,7 @@
             this.btnHoaDon.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.Aqua;
-            this.btnHoaDon.Location = new System.Drawing.Point(26, 454);
+            this.btnHoaDon.Location = new System.Drawing.Point(27, 442);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(183, 53);
             this.btnHoaDon.TabIndex = 4;
@@ -155,7 +155,7 @@
             this.btnNCCHSX.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNCCHSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNCCHSX.ForeColor = System.Drawing.Color.Aqua;
-            this.btnNCCHSX.Location = new System.Drawing.Point(26, 370);
+            this.btnNCCHSX.Location = new System.Drawing.Point(27, 358);
             this.btnNCCHSX.Name = "btnNCCHSX";
             this.btnNCCHSX.Size = new System.Drawing.Size(183, 53);
             this.btnNCCHSX.TabIndex = 4;
@@ -168,7 +168,7 @@
             this.btnSP.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSP.ForeColor = System.Drawing.Color.Aqua;
-            this.btnSP.Location = new System.Drawing.Point(26, 283);
+            this.btnSP.Location = new System.Drawing.Point(27, 271);
             this.btnSP.Name = "btnSP";
             this.btnSP.Size = new System.Drawing.Size(183, 53);
             this.btnSP.TabIndex = 4;
@@ -181,7 +181,7 @@
             this.btnKhach.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhach.ForeColor = System.Drawing.Color.Aqua;
-            this.btnKhach.Location = new System.Drawing.Point(26, 192);
+            this.btnKhach.Location = new System.Drawing.Point(27, 180);
             this.btnKhach.Name = "btnKhach";
             this.btnKhach.Size = new System.Drawing.Size(183, 53);
             this.btnKhach.TabIndex = 4;
@@ -193,7 +193,7 @@
             this.btnNhanVien.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.Aqua;
-            this.btnNhanVien.Location = new System.Drawing.Point(26, 104);
+            this.btnNhanVien.Location = new System.Drawing.Point(27, 92);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(183, 53);
             this.btnNhanVien.TabIndex = 3;
@@ -206,7 +206,7 @@
             this.btnHome.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Aqua;
-            this.btnHome.Location = new System.Drawing.Point(26, 19);
+            this.btnHome.Location = new System.Drawing.Point(27, 7);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(183, 53);
             this.btnHome.TabIndex = 2;
@@ -283,9 +283,10 @@
             // 
             // pnLoad
             // 
-            this.pnLoad.Location = new System.Drawing.Point(250, 86);
+            this.pnLoad.BackgroundImage = global::QL_BanMyPham_APP.Properties.Resources.my_pham_noi_dia_trung_12_min;
+            this.pnLoad.Location = new System.Drawing.Point(250, 110);
             this.pnLoad.Name = "pnLoad";
-            this.pnLoad.Size = new System.Drawing.Size(1366, 776);
+            this.pnLoad.Size = new System.Drawing.Size(1366, 752);
             this.pnLoad.TabIndex = 6;
             // 
             // frmMain
@@ -330,7 +331,7 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Button btnHoaDon;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnKhuyenMai;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMaNV;
