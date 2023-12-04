@@ -274,5 +274,10 @@ namespace QL_BanMyPham_APP
         {
             loadData();
         }
+
+        private void txtGiaBan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

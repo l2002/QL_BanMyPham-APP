@@ -54,6 +54,9 @@ create table SanPham
 	constraint FK_SanPham_KhuyenMai foreign key(MaKM) references KhuyenMai,
 	constraint FK_SanPham_ThuongHieu foreign key(MaTH) references ThuongHieu
 )
+alter table SanPham
+Add MoTa nvarchar(200)
+
 create table LoHang
 (
 	MaLo char(20),
@@ -212,3 +215,25 @@ delete CTDonHang from CTDonHang,SanPham where SanPham.MaSP=CTDonHang.MaSP and Ma
 delete FROM DonHang WHERE MaDH = 'HDB11302023_102210  '
 
 insert into TaiKhoan(sMaTK,sTaiKhoan,sMatKhau,Email,iMaQuyen,MaNV) values('3',N'Thien','123','thien@gmail.com','1','NV03')
+
+
+SELECT SUM(SoLuongMua) AS SoSanPhamDaBan
+FROM CTDonHang
+INNER JOIN SanPham ON CTDonHang.MaSP = SanPham.MaSP
+
+SELECT TenSP, SUM(SoLuongMua) AS SoLuongBanRa
+FROM CTDonHang,SanPham
+where SanPham.MaSP=CTDonHang.MaSP
+GROUP BY TenSP
+ORDER BY SoLuongBanRa DESC
+
+
+SELECT TOP 10 KhachHang.TenKH as Ten, SUM(TongTien) as TongTien
+FROM DonHang,KhachHang
+where KhachHang.MaKH=DonHang.MaKH
+GROUP BY KhachHang.TenKH
+ORDER BY TongTien DESC 
+
+
+ SELECT TOP  PERCENT * FROM KhachHang; 
+

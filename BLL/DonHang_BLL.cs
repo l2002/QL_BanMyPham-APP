@@ -36,5 +36,17 @@ namespace BLL
         {
             return dhAccess.xoaHoaDon(madh);
         }
+        public string getSPBan()
+        {
+            return dhAccess.getSPBan();
+        }
+        public string getTongDoanhThu()
+        {
+            return dhAccess.getTongDoanhThu();
+        }
+        public string getTongKH()
+        {
+            return dhAccess.getTongKH();
+        }
     }
 }

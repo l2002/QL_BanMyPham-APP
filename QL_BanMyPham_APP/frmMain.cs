@@ -134,5 +134,17 @@ namespace QL_BanMyPham_APP
             this.pnLoad.Controls.Add(frm);
             frm.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Báo Cáo";
+            this.pnLoad.Controls.Clear();
+            frmBaoCao frm = new frmBaoCao() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }

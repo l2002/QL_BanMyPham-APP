@@ -45,8 +45,5 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\bin\Debug\DAL.pdb
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\bin\Debug\DTO.dll
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\bin\Debug\DTO.pdb
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\obj\Debug\DAL.dll
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\DAL\obj\Debug\DAL.pdb

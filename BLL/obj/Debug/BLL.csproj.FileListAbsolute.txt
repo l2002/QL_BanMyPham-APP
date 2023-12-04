@@ -51,8 +51,6 @@ C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\BLL\bin\Debug\DTO.dll
 C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\BLL\bin\Debug\DAL.pdb
 C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\BLL\bin\Debug\DTO.pdb
 C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.dll
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.pdb
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\bin\Debug\BLL.dll
@@ -61,4 +59,4 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\bin\Debug\DTO.dll
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\bin\Debug\DAL.pdb
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\bin\Debug\DTO.pdb
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

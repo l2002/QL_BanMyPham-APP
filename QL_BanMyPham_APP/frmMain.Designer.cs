@@ -42,6 +42,7 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.avt = new System.Windows.Forms.PictureBox();
@@ -108,7 +109,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Báo cáo";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.btnNCCHSX_Click);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnKhuyenMai
             // 
@@ -216,6 +217,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblMaNV);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.avt);
@@ -224,12 +226,23 @@
             this.panel2.Size = new System.Drawing.Size(250, 181);
             this.panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.Location = new System.Drawing.Point(24, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Mã NV:";
+            // 
             // lblMaNV
             // 
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNV.ForeColor = System.Drawing.Color.Aqua;
-            this.lblMaNV.Location = new System.Drawing.Point(68, 110);
+            this.lblMaNV.Location = new System.Drawing.Point(100, 110);
             this.lblMaNV.Name = "lblMaNV";
             this.lblMaNV.Size = new System.Drawing.Size(100, 24);
             this.lblMaNV.TabIndex = 6;
@@ -321,6 +334,7 @@
         private System.Windows.Forms.Button btnKhuyenMai;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMaNV;
+        private System.Windows.Forms.Label label1;
     }
 }
 

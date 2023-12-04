@@ -45,5 +45,26 @@ namespace DAL
             int kq = database.excuteNonQuery(sql);
             return kq;
         }
+        public string getSPBan()
+        {
+            string sql;
+            sql = "SELECT SUM(SoLuongMua) AS SoSanPhamDaBan FROM CTDonHang INNER JOIN SanPham ON CTDonHang.MaSP = SanPham.MaSP";
+            string kq = database.GetFieldValues(sql);
+            return kq;
+        }
+        public string getTongDoanhThu()
+        {
+            string sql;
+            sql = "SELECT SUM(TongTien) AS TongDoanhThu FROM DonHang";
+            string kq = database.GetFieldValues(sql);
+            return kq;
+        }
+        public string getTongKH()
+        {
+            string sql;
+            sql = "SELECT COUNT(*) AS TongSoKhachHang FROM KhachHang";
+            string kq = database.GetFieldValues(sql);
+            return kq;
+        }
     }
 }
