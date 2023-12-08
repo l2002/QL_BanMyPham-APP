@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -248,6 +249,14 @@ namespace QL_BanMyPham_APP
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frmHDReport frm=new frmHDReport();
+            frm.Show();
+
+
         }
     }
 }

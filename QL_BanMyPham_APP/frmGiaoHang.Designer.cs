@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnUpdateNgayGiao = new System.Windows.Forms.Button();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -47,18 +46,6 @@
             this.txtNgayGiao = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHD)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(640, 153);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(149, 39);
-            this.btnXoa.TabIndex = 24;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnUpdateNgayGiao
             // 
@@ -131,10 +118,10 @@
             // dgvHD
             // 
             this.dgvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHD.Location = new System.Drawing.Point(11, 222);
+            this.dgvHD.Location = new System.Drawing.Point(11, 186);
             this.dgvHD.Name = "dgvHD";
             this.dgvHD.RowHeadersWidth = 51;
-            this.dgvHD.Size = new System.Drawing.Size(1345, 534);
+            this.dgvHD.Size = new System.Drawing.Size(1345, 570);
             this.dgvHD.TabIndex = 11;
             this.dgvHD.Click += new System.EventHandler(this.dgvHD_Click);
             // 
@@ -260,7 +247,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboTrangThai);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnUpdateNgayGiao);
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.txtMaHD);
@@ -279,8 +265,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnUpdateNgayGiao;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtMaHD;

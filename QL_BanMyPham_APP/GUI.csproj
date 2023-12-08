@@ -45,11 +45,14 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="frmGiaoHang.Designer.cs">
       <DependentUpon>frmGiaoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHDReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHDReport.Designer.cs">
+      <DependentUpon>frmHDReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhuyenMai.cs">
       <SubType>Form</SubType>
@@ -135,6 +144,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL_MyPham_DADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_MyPham_DADataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoHang.resx">
       <DependentUpon>frmGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHDReport.resx">
+      <DependentUpon>frmHDReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhuyenMai.resx">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
@@ -170,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +216,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QL_MyPham_DADataSet.xsc">
+      <DependentUpon>QL_MyPham_DADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QL_MyPham_DADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QL_MyPham_DADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_MyPham_DADataSet.xss">
+      <DependentUpon>QL_MyPham_DADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\co-nen-mo-cua-hang-ban-my-pham.jpg" />
   </ItemGroup>
   <ItemGroup>

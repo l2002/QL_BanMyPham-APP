@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class DatHang
+    public class DonHangOnl
     {
-        public string MaDH { get; set; }
+        public string Madon { get; set; }
         public string MaNguoiDung { get; set; }
         public string NgayDat { get; set; }
         public string NgayGiao { get; set; }

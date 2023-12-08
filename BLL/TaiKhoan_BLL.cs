@@ -48,9 +48,9 @@ namespace BLL
         {
             return access.themTaiKhoan(tk);
         }
-        public int setIndentity()
+        public string getMaQuyen(string manv)
         {
-            return access.setIndentity();
+            return access.getMaQuyen(manv);
         }
         public int suaTK(TaiKhoan tk)
         {

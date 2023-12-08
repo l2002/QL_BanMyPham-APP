@@ -53,12 +53,10 @@ namespace DAL
             string kq = database.GetFieldValues(sql);
             return kq;
         }
-        public int setIndentity()
+        public string getMaQuyen(string manv)
         {
-            string sql;
-            int kq;
-            sql = "set IDENTITY_INSERT TAIKHOAN ON";
-            kq = database.excuteNonQuery(sql);
+            string sql = "select iMaQuyen from TAIKHOAN,NhanVien where TAIKHOAN.MaNV=NhanVien.MaNV and TAIKHOAN.manv='" + manv + "'";
+            string kq = database.GetFieldValues(sql);
             return kq;
         }
         public int themTaiKhoan(TaiKhoan tk)

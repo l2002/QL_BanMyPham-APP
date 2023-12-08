@@ -53,6 +53,7 @@
             this.btnDong = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnIn = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDS)).BeginInit();
             this.SuspendLayout();
@@ -302,7 +303,7 @@
             this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDong.Location = new System.Drawing.Point(587, 713);
+            this.btnDong.Location = new System.Drawing.Point(429, 713);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(187, 60);
             this.btnDong.TabIndex = 26;
@@ -330,12 +331,26 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "Tổng tiền:";
             // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnIn.Location = new System.Drawing.Point(692, 713);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(187, 60);
+            this.btnIn.TabIndex = 45;
+            this.btnIn.Text = "IN HÓA ĐƠN";
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
             // frmCTDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDong);
@@ -380,5 +395,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label txtKhuyenMai;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnIn;
     }
 }

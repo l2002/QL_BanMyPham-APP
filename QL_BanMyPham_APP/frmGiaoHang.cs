@@ -14,8 +14,8 @@ namespace QL_BanMyPham_APP
 {
     public partial class frmGiaoHang : Form
     {
-        DatHang dhDTO = new DatHang();
-        DatHang_BLL dhBLL = new DatHang_BLL();
+        DonHangOnl dhDTO = new DonHangOnl();
+        DonHangOnl_BLL dhBLL = new DonHangOnl_BLL();
         public frmGiaoHang()
         {
             InitializeComponent();
@@ -35,10 +35,10 @@ namespace QL_BanMyPham_APP
             try
             {
                 txtMaHD.Text = dgvHD.CurrentRow.Cells[0].Value.ToString();
-                txtMaKH.Text = dgvHD.CurrentRow.Cells[1].Value.ToString();
-                txtNgayDat.Text = dgvHD.CurrentRow.Cells[2].Value.ToString();
-                txtNgayGiao.Text = dgvHD.CurrentRow.Cells[3].Value.ToString();
-                cboTrangThai.Text = dgvHD.CurrentRow.Cells[4].Value.ToString();
+                txtNgayDat.Text = dgvHD.CurrentRow.Cells[1].Value.ToString();
+                txtNgayGiao.Text = dgvHD.CurrentRow.Cells[2].Value.ToString();
+                cboTrangThai.Text = dgvHD.CurrentRow.Cells[3].Value.ToString();
+                txtMaKH.Text = dgvHD.CurrentRow.Cells[4].Value.ToString();
                 txtTongTien.Text = dgvHD.CurrentRow.Cells[5].Value.ToString();
             }
             catch
@@ -69,7 +69,7 @@ namespace QL_BanMyPham_APP
             if (btnUpdateNgayGiaoClicked)
             {
                 dhDTO.NgayGiao = txtNgayGiao.Text;
-                dhDTO.MaDH = txtMaHD.Text;
+                dhDTO.Madon = txtMaHD.Text;
 
                 if (dhBLL.updateNgayGiao(dhDTO) != -1)
                 {
@@ -87,7 +87,7 @@ namespace QL_BanMyPham_APP
             else if(btnUpdateTrangThaiClicked)
             {
                 dhDTO.TinhTrang = cboTrangThai.Text;
-                dhDTO.MaDH = txtMaHD.Text;
+                dhDTO.Madon = txtMaHD.Text;
 
                 if (dhBLL.updateTinhTrang(dhDTO) != -1)
                 {
@@ -106,26 +106,7 @@ namespace QL_BanMyPham_APP
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (txtMaHD.Text == "")
-            {
-                MessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                var n = MessageBox.Show("Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (n == DialogResult.Yes)
-                {
-                    if (dhBLL.xoaDonHang(txtMaHD.Text) != -1)
-                    {
-                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thất bại", "Thông báo", MessageBoxButtons.OK);
-                    }
-                    loadTable();
-                }
-            }
+            
         }
     }
 }

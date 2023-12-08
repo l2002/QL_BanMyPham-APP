@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QL_BanMyPham_APP
 {
     public partial class frmMain : Form
     {
+        TaiKhoan_BLL tk_bll = new TaiKhoan_BLL();
 
         private string _tenNV;
         private string _maNV;
@@ -47,6 +49,11 @@ namespace QL_BanMyPham_APP
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
+            if (tk_bll.getMaQuyen(_maNV) == "2")
+            {
+                MessageBox.Show("Bạn không có quyền truy cập trang này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             btnHome.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Nhân Viên";
@@ -125,6 +132,11 @@ namespace QL_BanMyPham_APP
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
+            if (tk_bll.getMaQuyen(_maNV) == "2")
+            {
+                MessageBox.Show("Bạn không có quyền truy cập trang này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             btnTaiKhoan.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Tài Khoản";

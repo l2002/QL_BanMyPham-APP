@@ -32,14 +32,14 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbl2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbl3 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,59 +57,6 @@
             this.panel1.Size = new System.Drawing.Size(426, 140);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel2.Controls.Add(this.lbl2);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(444, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 140);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Controls.Add(this.lbl3);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(915, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 140);
-            this.panel3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sản Phẩm Đã Bán";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(116, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tổng Doanh Thu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(121, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tổng Khách Hàng";
-            // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
@@ -120,6 +67,27 @@
             this.lbl1.Size = new System.Drawing.Size(30, 31);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(29, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(382, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Số Lượng Sản Phẩm Đã Bán";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel2.Controls.Add(this.lbl2);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(444, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(465, 140);
+            this.panel2.TabIndex = 1;
             // 
             // lbl2
             // 
@@ -132,6 +100,27 @@
             this.lbl2.TabIndex = 2;
             this.lbl2.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(116, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(231, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tổng Doanh Thu";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.lbl3);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(915, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(434, 140);
+            this.panel3.TabIndex = 2;
+            // 
             // lbl3
             // 
             this.lbl3.AutoSize = true;
@@ -142,6 +131,17 @@
             this.lbl3.Size = new System.Drawing.Size(30, 31);
             this.lbl3.TabIndex = 3;
             this.lbl3.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(121, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(247, 31);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tổng Khách Hàng";
             // 
             // chart
             // 

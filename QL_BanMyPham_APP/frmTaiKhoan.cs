@@ -65,30 +65,37 @@ namespace QL_BanMyPham_APP
             }
             int stt = dgvDS.RowCount;
             string maTK;
-
-            if (stt < 10)
+            try
             {
-                maTK = "TK" + "0" + stt.ToString();
-            }
-            else
-            {
-                maTK = "TK" + stt.ToString();
-            }
+                if (stt < 10)
+                {
+                    maTK = "TK" + "0" + stt.ToString();
+                }
+                else
+                {
+                    maTK = "TK" + stt.ToString();
+                }
 
-            tkDTO.MaTK = maTK;
-            tkDTO.TenTK = txtTenTK.Text;
-            tkDTO.MatKhau = txtMatKhau.Text;
-            tkDTO.Email = txtEmal.Text;
-            tkDTO.MaQuyen = cboQuyen.SelectedValue.ToString();
-            tkDTO.MaNV = cboTenNV.SelectedValue.ToString();
+                tkDTO.MaTK = maTK;
+                tkDTO.TenTK = txtTenTK.Text;
+                tkDTO.MatKhau = txtMatKhau.Text;
+                tkDTO.Email = txtEmal.Text;
+                tkDTO.MaQuyen = cboQuyen.SelectedValue.ToString();
+                tkDTO.MaNV = cboTenNV.SelectedValue.ToString();
 
-            
-            if (tkBLL.themTaiKhoan(tkDTO) != -1)
-            {
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+
+                if (tkBLL.themTaiKhoan(tkDTO) != -1)
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                }
             }
-            else {           
-                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+            catch
+            {
+                MessageBox.Show("Mã Tài khoản trùng!");
             }
            
             loadTable();

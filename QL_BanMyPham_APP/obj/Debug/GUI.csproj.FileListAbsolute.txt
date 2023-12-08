@@ -137,4 +137,8 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmHDReport.resources
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\HoaDon.rdlc
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.CopyComplete

@@ -9,26 +9,23 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class DatHang_BLL
+    public class DonHangOnl_BLL
     {
-        DatHangAccess dhAccess = new DatHangAccess();
+        DonHangOnlAccess dhAccess = new DonHangOnlAccess();
         DatabaseAccess dbAccess = new DatabaseAccess();
         public DataTable getHoaDonOnl()
         {
             return dhAccess.getHoaDonOnl();
         }
-        public int updateTinhTrang(DatHang dh)
+        public int updateTinhTrang(DonHangOnl dh)
         {
             return dhAccess.updateTrangThai(dh);
         }
-        public int updateNgayGiao(DatHang dh)
+        public int updateNgayGiao(DonHangOnl dh)
         {
             return dhAccess.updateNgayGiao(dh);
         }
-        public int xoaDonHang(string madh)
-        {
-            return dhAccess.xoaDatHang(madh);
-        }
+        
        
     }
 }
