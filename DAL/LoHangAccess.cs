@@ -30,15 +30,11 @@ namespace DAL
         public List<LoHang> getListLoHang()
         {
             List<LoHang> list = new List<LoHang>();
-            DataTable dt = database.fillTable("select * from LoHang");
+            DataTable dt = database.fillTable("select distinct MaLo from LoHang");
             foreach (DataRow dr in dt.Rows)
             {
                 LoHang lh = new LoHang();
-                lh.MaLo = dr[0].ToString().Trim();
-                lh.MaSP = dr[1].ToString();
-                lh.MaNCC = dr[2].ToString();
-                lh.NgayNhap = dr[3].ToString();
-                lh.SoLuong = int.Parse(dr[4].ToString());
+                lh.MaLo = dr[0].ToString().Trim();               
                 list.Add(lh);
             }
             return list;

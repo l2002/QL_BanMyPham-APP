@@ -16,5 +16,21 @@ namespace BLL
         {
             return lhAccess.getListLoaiHang();
         }
+        public DataTable getDataLoaiHang()
+        {
+            return lhAccess.getDataLoaiHang();
+        }
+        public int themLoaiHang(LoaiHang lh)
+        {
+            return lhAccess.themLoaiHang(lh);
+        }
+        public int suaLoaiHang(LoaiHang lh)
+        {
+            return lhAccess.suaLoaiHang(lh);
+        }
+        public int xoaLoaiHang(string maloai)
+        {
+            return lhAccess.xoaLoaiHang(maloai);
+        }
     }
 }

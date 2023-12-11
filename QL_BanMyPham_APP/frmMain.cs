@@ -163,5 +163,29 @@ namespace QL_BanMyPham_APP
             this.pnLoad.Controls.Add(frm);
             frm.Show();
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Khách hàng";
+            this.pnLoad.Controls.Clear();
+            frmKhachHang frm = new frmKhachHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnLoaiHang_Click(object sender, EventArgs e)
+        {
+            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Loại hàng";
+            this.pnLoad.Controls.Clear();
+            frmLoaiHang frm = new frmLoaiHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }

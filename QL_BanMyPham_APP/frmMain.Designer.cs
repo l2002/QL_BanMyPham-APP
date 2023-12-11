@@ -38,17 +38,18 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnNCCHSX = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
-            this.btnKhach = new System.Windows.Forms.Button();
+            this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.avt = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.avt = new System.Windows.Forms.PictureBox();
             this.pnLoad = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLoaiHang = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
@@ -75,9 +76,10 @@
             this.panel1.Controls.Add(this.btnKhuyenMai);
             this.panel1.Controls.Add(this.btnTaiKhoan);
             this.panel1.Controls.Add(this.btnHoaDon);
+            this.panel1.Controls.Add(this.btnLoaiHang);
             this.panel1.Controls.Add(this.btnNCCHSX);
             this.panel1.Controls.Add(this.btnSP);
-            this.panel1.Controls.Add(this.btnKhach);
+            this.panel1.Controls.Add(this.btnKhachHang);
             this.panel1.Controls.Add(this.btnNhanVien);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Location = new System.Drawing.Point(1, 180);
@@ -90,7 +92,7 @@
             this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Aqua;
-            this.button3.Location = new System.Drawing.Point(28, 765);
+            this.button3.Location = new System.Drawing.Point(29, 829);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 53);
             this.button3.TabIndex = 5;
@@ -103,7 +105,7 @@
             this.btnBaoCao.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.ForeColor = System.Drawing.Color.Aqua;
-            this.btnBaoCao.Location = new System.Drawing.Point(28, 689);
+            this.btnBaoCao.Location = new System.Drawing.Point(28, 769);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(183, 53);
             this.btnBaoCao.TabIndex = 4;
@@ -116,7 +118,7 @@
             this.btnKhuyenMai.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuyenMai.ForeColor = System.Drawing.Color.Aqua;
-            this.btnKhuyenMai.Location = new System.Drawing.Point(28, 607);
+            this.btnKhuyenMai.Location = new System.Drawing.Point(28, 687);
             this.btnKhuyenMai.Name = "btnKhuyenMai";
             this.btnKhuyenMai.Size = new System.Drawing.Size(183, 53);
             this.btnKhuyenMai.TabIndex = 4;
@@ -129,7 +131,7 @@
             this.btnTaiKhoan.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaiKhoan.ForeColor = System.Drawing.Color.Aqua;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(27, 527);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(27, 607);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(183, 53);
             this.btnTaiKhoan.TabIndex = 4;
@@ -142,7 +144,7 @@
             this.btnHoaDon.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.Aqua;
-            this.btnHoaDon.Location = new System.Drawing.Point(27, 442);
+            this.btnHoaDon.Location = new System.Drawing.Point(27, 522);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(183, 53);
             this.btnHoaDon.TabIndex = 4;
@@ -155,7 +157,7 @@
             this.btnNCCHSX.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnNCCHSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNCCHSX.ForeColor = System.Drawing.Color.Aqua;
-            this.btnNCCHSX.Location = new System.Drawing.Point(27, 358);
+            this.btnNCCHSX.Location = new System.Drawing.Point(27, 438);
             this.btnNCCHSX.Name = "btnNCCHSX";
             this.btnNCCHSX.Size = new System.Drawing.Size(183, 53);
             this.btnNCCHSX.TabIndex = 4;
@@ -176,17 +178,18 @@
             this.btnSP.UseVisualStyleBackColor = false;
             this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
             // 
-            // btnKhach
+            // btnKhachHang
             // 
-            this.btnKhach.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhach.ForeColor = System.Drawing.Color.Aqua;
-            this.btnKhach.Location = new System.Drawing.Point(27, 180);
-            this.btnKhach.Name = "btnKhach";
-            this.btnKhach.Size = new System.Drawing.Size(183, 53);
-            this.btnKhach.TabIndex = 4;
-            this.btnKhach.Text = "Khách Hàng";
-            this.btnKhach.UseVisualStyleBackColor = false;
+            this.btnKhachHang.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Aqua;
+            this.btnKhachHang.Location = new System.Drawing.Point(27, 180);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(183, 53);
+            this.btnKhachHang.TabIndex = 4;
+            this.btnKhachHang.Text = "Khách Hàng";
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
@@ -260,14 +263,6 @@
             this.lblName.Text = "Nguyễn Minh Luân";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // avt
-            // 
-            this.avt.Location = new System.Drawing.Point(72, 7);
-            this.avt.Name = "avt";
-            this.avt.Size = new System.Drawing.Size(100, 87);
-            this.avt.TabIndex = 0;
-            this.avt.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -281,6 +276,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // avt
+            // 
+            this.avt.Location = new System.Drawing.Point(72, 7);
+            this.avt.Name = "avt";
+            this.avt.Size = new System.Drawing.Size(100, 87);
+            this.avt.TabIndex = 0;
+            this.avt.TabStop = false;
+            // 
             // pnLoad
             // 
             this.pnLoad.BackgroundImage = global::QL_BanMyPham_APP.Properties.Resources.my_pham_noi_dia_trung_12_min;
@@ -288,6 +291,19 @@
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(1366, 752);
             this.pnLoad.TabIndex = 6;
+            // 
+            // btnLoaiHang
+            // 
+            this.btnLoaiHang.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnLoaiHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoaiHang.ForeColor = System.Drawing.Color.Aqua;
+            this.btnLoaiHang.Location = new System.Drawing.Point(27, 354);
+            this.btnLoaiHang.Name = "btnLoaiHang";
+            this.btnLoaiHang.Size = new System.Drawing.Size(183, 53);
+            this.btnLoaiHang.TabIndex = 4;
+            this.btnLoaiHang.Text = "Loại Hàng";
+            this.btnLoaiHang.UseVisualStyleBackColor = false;
+            this.btnLoaiHang.Click += new System.EventHandler(this.btnLoaiHang_Click);
             // 
             // frmMain
             // 
@@ -318,7 +334,7 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnKhach;
+        private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
@@ -336,6 +352,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLoaiHang;
     }
 }
 

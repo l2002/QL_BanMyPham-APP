@@ -253,8 +253,8 @@ namespace QL_BanMyPham_APP
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            frmHDReport frm=new frmHDReport();
-            frm.Show();
+            //frmHDReport frm=new frmHDReport();
+            //frm.Show();
 
 
         }
