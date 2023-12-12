@@ -165,3 +165,15 @@ C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_Ban
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmIP_EP.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhachHang.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLoaiHang.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmIP_EP.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBaoCao.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmHDReport.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhachHang.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLoaiHang.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmTaiKhoan.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmThuongHieu.resources
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\HoaDon.rdlc
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.xml
