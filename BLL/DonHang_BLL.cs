@@ -14,10 +14,6 @@ namespace BLL
         DonHangAccess dhAccess = new DonHangAccess();
         DatabaseAccess dbAccess = new DatabaseAccess();
 
-        public string taoMaDH()
-        {
-            return dbAccess.CreateKey("HDB");
-        }
         public int themHD(DonHang dh)
         {
             return dhAccess.themHD(dh);

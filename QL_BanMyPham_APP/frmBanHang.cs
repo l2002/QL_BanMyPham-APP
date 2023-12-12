@@ -81,7 +81,10 @@ namespace QL_BanMyPham_APP
 
         private void btnTaoHD_Click(object sender, EventArgs e)
         {
-            txtMaHD.Text = dhBLL.taoMaDH();
+            DateTime date = DateTime.Now;
+            string mahd;
+            mahd = "HDB" + date.ToString("ddMMyyyyHHmmss");
+            txtMaHD.Text = mahd;
             btnThemHD.Enabled = true;
             btnTaoHDClicked = true;
 

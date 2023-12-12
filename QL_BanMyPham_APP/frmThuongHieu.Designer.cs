@@ -132,7 +132,7 @@ namespace QL_BanMyPham_APP
             this.dgvThuongHieu.Location = new System.Drawing.Point(53, 164);
             this.dgvThuongHieu.Name = "dgvThuongHieu";
             this.dgvThuongHieu.RowHeadersWidth = 51;
-            this.dgvThuongHieu.Size = new System.Drawing.Size(571, 624);
+            this.dgvThuongHieu.Size = new System.Drawing.Size(571, 567);
             this.dgvThuongHieu.TabIndex = 27;
             this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
             // 
@@ -208,7 +208,7 @@ namespace QL_BanMyPham_APP
             this.dgvNCC.Location = new System.Drawing.Point(704, 164);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.RowHeadersWidth = 51;
-            this.dgvNCC.Size = new System.Drawing.Size(660, 624);
+            this.dgvNCC.Size = new System.Drawing.Size(660, 567);
             this.dgvNCC.TabIndex = 41;
             this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
             // 

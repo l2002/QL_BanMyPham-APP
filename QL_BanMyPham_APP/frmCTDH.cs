@@ -52,6 +52,7 @@ namespace QL_BanMyPham_APP
             txtSoLuong.Text = "0";
             txtGiaBan.Text = "0";
             txtThanhTien.Text = "0";
+          
         }
         private void frmCTDH_Load(object sender, EventArgs e)
         {
@@ -74,11 +75,18 @@ namespace QL_BanMyPham_APP
             txtHSD.Text = spBLL.GetFieldValues(str);
             str = "SELECT GiaBan FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
             txtGiaBan.Text = spBLL.GetFieldValues(str);
-            str = "select KhuyenMai.TenKM from SanPham,KhuyenMai WHERE MaSP = N'" + cboMaSP.SelectedValue + "' and SanPham.MaKM=KhuyenMai.MaKM";
-            txtKhuyenMai.Text = spBLL.GetFieldValues(str);
 
+            str = "select KhuyenMai.TenKM from SanPham,KhuyenMai WHERE MaSP = N'" + cboMaSP.SelectedValue + "' and SanPham.MaKM=KhuyenMai.MaKM";
+            if (txtKhuyenMai.Text == null)
+            {
+                txtKhuyenMai.Text = "0";
+            }
+            else
+            {
+                txtKhuyenMai.Text = spBLL.GetFieldValues(str);
+            }
             str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
-            txtSLCon.Text = ctdhBLL.GetFieldValues(str);     
+            txtSLCon.Text = ctdhBLL.GetFieldValues(str);
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
@@ -204,8 +212,6 @@ namespace QL_BanMyPham_APP
                 tongmoi = tong - thanhTienXoa;
                 ctdhBLL.updateTongTien_Xoa(tongmoi, txtMaDH.Text);
                 loadTable();
-
-                //LoadDataGridView();
 
             }
 

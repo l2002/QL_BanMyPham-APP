@@ -24,12 +24,19 @@ namespace QL_BanMyPham_APP
 
         private void frmBaoCao_Load(object sender, EventArgs e)
         {
-            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
-            string kq = double.Parse(dhBLL.getTongDoanhThu()).ToString("#,###" + ' ' + "VNĐ", cul.NumberFormat);
-            lbl1.Text = dhBLL.getSPBan().ToString();
-            lbl2.Text = String.Format("{0:0.00}", kq);
-            lbl3.Text = dhBLL.getTongKH().ToString();
-
+            try
+            {
+                CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+                string kq = double.Parse(dhBLL.getTongDoanhThu()).ToString("#,###" + ' ' + "VNĐ", cul.NumberFormat);
+                lbl1.Text = dhBLL.getSPBan().ToString();
+                lbl2.Text = String.Format("{0:0.00}", kq);
+                lbl3.Text = dhBLL.getTongKH().ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có dữ liệu để hiển thị!");
+                return;
+            }
             fillChart();
         }
         private void fillChart()

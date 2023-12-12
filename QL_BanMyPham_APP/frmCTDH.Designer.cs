@@ -107,9 +107,8 @@
             this.txtKhuyenMai.ForeColor = System.Drawing.Color.Red;
             this.txtKhuyenMai.Location = new System.Drawing.Point(1089, 89);
             this.txtKhuyenMai.Name = "txtKhuyenMai";
-            this.txtKhuyenMai.Size = new System.Drawing.Size(30, 31);
+            this.txtKhuyenMai.Size = new System.Drawing.Size(0, 31);
             this.txtKhuyenMai.TabIndex = 26;
-            this.txtKhuyenMai.Text = "0";
             // 
             // btnThemSP
             // 
