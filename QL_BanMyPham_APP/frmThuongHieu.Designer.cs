@@ -52,7 +52,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(506, 128);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(118, 27);
             this.btnXoa.TabIndex = 38;
@@ -64,7 +64,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(254, 128);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(128, 27);
             this.btnSua.TabIndex = 39;
@@ -76,7 +76,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(53, 128);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(104, 27);
             this.btnThem.TabIndex = 40;
@@ -88,7 +88,7 @@ namespace QL_BanMyPham_APP
             // 
             this.txtTenTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTH.Location = new System.Drawing.Point(202, 64);
-            this.txtTenTH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTH.Name = "txtTenTH";
             this.txtTenTH.Size = new System.Drawing.Size(245, 27);
             this.txtTenTH.TabIndex = 35;
@@ -97,7 +97,7 @@ namespace QL_BanMyPham_APP
             // 
             this.txtMaTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaTH.Location = new System.Drawing.Point(196, 17);
-            this.txtMaTH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaTH.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaTH.Name = "txtMaTH";
             this.txtMaTH.Size = new System.Drawing.Size(158, 27);
             this.txtMaTH.TabIndex = 36;
@@ -132,7 +132,7 @@ namespace QL_BanMyPham_APP
             this.dgvThuongHieu.Location = new System.Drawing.Point(53, 164);
             this.dgvThuongHieu.Name = "dgvThuongHieu";
             this.dgvThuongHieu.RowHeadersWidth = 51;
-            this.dgvThuongHieu.Size = new System.Drawing.Size(571, 609);
+            this.dgvThuongHieu.Size = new System.Drawing.Size(571, 624);
             this.dgvThuongHieu.TabIndex = 27;
             this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
             // 
@@ -140,7 +140,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnSuaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaNCC.Location = new System.Drawing.Point(932, 128);
-            this.btnSuaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaNCC.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaNCC.Name = "btnSuaNCC";
             this.btnSuaNCC.Size = new System.Drawing.Size(128, 27);
             this.btnSuaNCC.TabIndex = 46;
@@ -152,7 +152,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNCC.Location = new System.Drawing.Point(707, 128);
-            this.btnThemNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemNCC.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemNCC.Name = "btnThemNCC";
             this.btnThemNCC.Size = new System.Drawing.Size(104, 27);
             this.btnThemNCC.TabIndex = 47;
@@ -164,7 +164,7 @@ namespace QL_BanMyPham_APP
             // 
             this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNCC.Location = new System.Drawing.Point(874, 65);
-            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.Size = new System.Drawing.Size(245, 27);
             this.txtTenNCC.TabIndex = 44;
@@ -173,7 +173,7 @@ namespace QL_BanMyPham_APP
             // 
             this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNCC.Location = new System.Drawing.Point(874, 18);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(158, 27);
             this.txtMaNCC.TabIndex = 45;
@@ -208,7 +208,7 @@ namespace QL_BanMyPham_APP
             this.dgvNCC.Location = new System.Drawing.Point(704, 164);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.RowHeadersWidth = 51;
-            this.dgvNCC.Size = new System.Drawing.Size(727, 609);
+            this.dgvNCC.Size = new System.Drawing.Size(660, 624);
             this.dgvNCC.TabIndex = 41;
             this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
             // 
@@ -216,7 +216,7 @@ namespace QL_BanMyPham_APP
             // 
             this.btnXoaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNCC.Location = new System.Drawing.Point(1160, 128);
-            this.btnXoaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaNCC.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaNCC.Name = "btnXoaNCC";
             this.btnXoaNCC.Size = new System.Drawing.Size(118, 27);
             this.btnXoaNCC.TabIndex = 48;
@@ -230,7 +230,7 @@ namespace QL_BanMyPham_APP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1443, 857);
+            this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.btnXoaNCC);
             this.Controls.Add(this.btnSuaNCC);
             this.Controls.Add(this.btnThemNCC);
@@ -247,7 +247,8 @@ namespace QL_BanMyPham_APP
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvThuongHieu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThuongHieu";
             this.Text = "frmThuongHieu";
             this.Load += new System.EventHandler(this.frmThuongHieu_Load);

@@ -73,7 +73,7 @@ namespace QL_BanMyPham_APP
         {
             btnNCCHSX.BackColor = Color.FromArgb(46, 51, 73);
 
-            lblTitle.Text = "NCC&HSX";
+            lblTitle.Text = "Thương hiệu & Nhà cung cấp";
             this.pnLoad.Controls.Clear();
             frmThuongHieu frm = new frmThuongHieu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -159,6 +159,54 @@ namespace QL_BanMyPham_APP
             lblTitle.Text = "Báo Cáo";
             this.pnLoad.Controls.Clear();
             frmBaoCao frm = new frmBaoCao() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Khách hàng";
+            this.pnLoad.Controls.Clear();
+            frmKhachHang frm = new frmKhachHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnLoaiHang_Click(object sender, EventArgs e)
+        {
+            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Loại hàng";
+            this.pnLoad.Controls.Clear();
+            frmLoaiHang frm = new frmLoaiHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnNhap_Xuat_Click(object sender, EventArgs e)
+        {
+            btnNhap_Xuat.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Nhập & Xuất Dữ liệu";
+            this.pnLoad.Controls.Clear();
+            frmIP_EP frm = new frmIP_EP() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frm.FormBorderStyle = FormBorderStyle.None;
+            this.pnLoad.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnKhach_Click(object sender, EventArgs e)
+        {
+            btnKhach.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Khách Hàng";
+            this.pnLoad.Controls.Clear();
+            frmKhachHang frm = new frmKhachHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();

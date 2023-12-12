@@ -14,7 +14,7 @@ namespace DAL
         public DataTable getLoHang(string malo)
         {
             SanPham nv = new SanPham();
-            DataTable dt = database.fillTable("select sp.masp,tensp,tenloai,tenth,HSD,HinhAnh,giaban,tenncc,soluong,ngaynhap from SanPham sp,LoHang lo,LoaiHang lh,ThuongHieu th,NhaCC ncc  where malo='"+malo+"' and sp.masp=lo.masp and lo.mancc=ncc.mancc and lh.maloai=sp.maloai and th.math=sp.math");
+            DataTable dt = database.fillTable("select sp.masp,tensp,tenloai,tenth,HSD,HinhAnh,giaban,mota,tenncc,soluong,ngaynhap from SanPham sp,LoHang lo,LoaiHang lh,ThuongHieu th,NhaCC ncc  where malo='"+malo+"' and sp.masp=lo.masp and lo.mancc=ncc.mancc and lh.maloai=sp.maloai and th.math=sp.math");
             dt.Columns[0].ColumnName = "Mã sản phẩm";
             dt.Columns[1].ColumnName = "Tên sản phẩm";
             dt.Columns[2].ColumnName = "Tên loại";
@@ -22,23 +22,20 @@ namespace DAL
             dt.Columns[4].ColumnName = "Hạn sử dụng";
             dt.Columns[5].ColumnName = "Hình ảnh";
             dt.Columns[6].ColumnName = "Giá bán";
-            dt.Columns[7].ColumnName = "Tên NCC";
-            dt.Columns[8].ColumnName = "Số lượng";
-            dt.Columns[9].ColumnName = "Ngày nhập";
+            dt.Columns[7].ColumnName = "Mô tả";
+            dt.Columns[8].ColumnName = "Tên NCC";
+            dt.Columns[9].ColumnName = "Số lượng";
+            dt.Columns[10].ColumnName = "Ngày nhập";
             return dt;
         }
         public List<LoHang> getListLoHang()
         {
             List<LoHang> list = new List<LoHang>();
-            DataTable dt = database.fillTable("select * from LoHang");
+            DataTable dt = database.fillTable("select distinct MaLo from LoHang");
             foreach (DataRow dr in dt.Rows)
             {
                 LoHang lh = new LoHang();
-                lh.MaLo = dr[0].ToString().Trim();
-                lh.MaSP = dr[1].ToString();
-                lh.MaNCC = dr[2].ToString();
-                lh.NgayNhap = dr[3].ToString();
-                lh.SoLuong = int.Parse(dr[4].ToString());
+                lh.MaLo = dr[0].ToString().Trim();               
                 list.Add(lh);
             }
             return list;

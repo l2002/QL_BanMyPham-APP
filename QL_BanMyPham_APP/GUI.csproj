@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmIP_EP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIP_EP.Designer.cs">
+      <DependentUpon>frmIP_EP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,17 +94,27 @@
     <Compile Include="frmGiaoHang.Designer.cs">
       <DependentUpon>frmGiaoHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHDReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmHDReport.cs" />
     <Compile Include="frmHDReport.Designer.cs">
       <DependentUpon>frmHDReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKhuyenMai.Designer.cs">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiHang.designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -149,6 +165,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_MyPham_DADataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmIP_EP.resx">
+      <DependentUpon>frmIP_EP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,8 +183,14 @@
     <EmbeddedResource Include="frmHDReport.resx">
       <DependentUpon>frmHDReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmKhuyenMai.resx">
       <DependentUpon>frmKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

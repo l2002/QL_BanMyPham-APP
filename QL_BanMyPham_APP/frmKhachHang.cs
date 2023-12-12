@@ -137,11 +137,10 @@ namespace QL_BanMyPham_APP
             if (dgvKhachHang.SelectedRows.Count > 0)
             {
                 txtMaKH.Text = dgvKhachHang.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenKH.Text = dgvKhachHang.SelectedRows[0].Cells[1].Value.ToString();
-                txtDiaChi.Text = dgvKhachHang.SelectedRows[0].Cells[2].Value.ToString();
-                txtDienThoai.Text = dgvKhachHang.SelectedRows[0].Cells[3].Value.ToString();
-                dtpNgaySinh.Text = dgvKhachHang.SelectedRows[0].Cells[4].Value.ToString();
-                
+                txtTenKH.Text = dgvKhachHang.SelectedRows[1].Cells[1].Value.ToString();
+                txtDiaChi.Text = dgvKhachHang.SelectedRows[2].Cells[2].Value.ToString();
+                txtDienThoai.Text = dgvKhachHang.SelectedRows[3].Cells[3].Value.ToString();
+                dtpNgaySinh.Text = dgvKhachHang.SelectedRows[4].Cells[4].Value.ToString();              
             }
             dgvKhachHang.ReadOnly = true;
         }

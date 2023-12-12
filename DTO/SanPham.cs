@@ -16,5 +16,6 @@ namespace DTO
         public string HSD { get; set; }
         public string HinhAnh { get; set; }
         public float GiaBan { get; set; }
+        public string MoTa { get; set; }
     }
 }

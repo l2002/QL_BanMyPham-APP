@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,21 +23,21 @@ namespace BLL
         {
             dbAccess.FillCombo(sql,cbo,ma,ten);
         }
-        //public DataTable getKhachHang()
-        //{
-        //    return khAccess.getKhachHang();
-        //}
-        //public int themKhachHang(KhachHang kh)
-        //{
-        //    return khAccess.themKhachHang(kh);
-        //}
-        //public int suaKhachHang(KhachHang kh)
-        //{
-        //    return khAccess.suaKhachHang(kh);
-        //}
-        //public int xoaKhachHang(string makh)
-        //{
-        //    return khAccess.xoaKhachHang(makh);
-        //}
+        public DataTable getKhachHang()
+        {
+            return khAccess.getKhachHang();
+        }
+        public int themKhachHang(KhachHang kh)
+        {
+            return khAccess.themKhachHang(kh);
+        }
+        public int suaKhachHang(KhachHang kh)
+        {
+            return khAccess.suaKhachHang(kh);
+        }
+        public int xoaKhachHang(string makh)
+        {
+            return khAccess.xoaKhachHang(makh);
+        }
     }
 }

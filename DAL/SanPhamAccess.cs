@@ -22,6 +22,7 @@ namespace DAL
             dt.Columns[5].ColumnName = "Hạn sử dụng";
             dt.Columns[6].ColumnName = "Hình ảnh";
             dt.Columns[7].ColumnName = "Giá bán";
+            dt.Columns[8].ColumnName = "Mô tả";
         }
         public DataTable getSanPham()
         {
@@ -31,13 +32,13 @@ namespace DAL
         }
         public int themSanPham(SanPham sp)
         {
-            string sql = "insert into SanPham(masp,tensp,maloai,math,hsd,hinhanh,giaban) values('" + sp.MaSP + "',N'" + sp.TenSP + "','" + sp.MaLoai + "','" + sp.MaTH + "','" + sp.HSD + "','" + sp.HinhAnh + "','" + sp.GiaBan + "')";
+            string sql = "insert into SanPham(masp,tensp,maloai,math,hsd,hinhanh,giaban,mota) values('" + sp.MaSP + "',N'" + sp.TenSP + "','" + sp.MaLoai + "','" + sp.MaTH + "','" + sp.HSD + "','" + sp.HinhAnh + "','" + sp.GiaBan + "',N'" + sp.MoTa + "')";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }
         public int suaSanPham(SanPham sp)
         {
-            string sql = "update SanPham set tensp=N'" + sp.TenSP + "',maloai=N'" + sp.MaLoai + "',math=N'" + sp.MaTH + "',hsd='" + sp.HSD + "',hinhanh='" + sp.HinhAnh + "',giaban='" + sp.GiaBan + "' where masp = '" + sp.MaSP + "'";
+            string sql = "update SanPham set tensp=N'" + sp.TenSP + "',maloai=N'" + sp.MaLoai + "',math=N'" + sp.MaTH + "',hsd='" + sp.HSD + "',hinhanh='" + sp.HinhAnh + "',giaban='" + sp.GiaBan + "',mota=N'" + sp.MoTa + "' where masp = '" + sp.MaSP + "'";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }
