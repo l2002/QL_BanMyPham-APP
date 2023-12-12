@@ -50,6 +50,7 @@
     <Compile Include="CTDH_BLL.cs" />
     <Compile Include="DonHangOnl_BLL.cs" />
     <Compile Include="DonHang_BLL.cs" />
+    <Compile Include="IPEP_BLL.cs" />
     <Compile Include="KhachHang_BLL.cs" />
     <Compile Include="KhuyenMai_BLL.cs" />
     <Compile Include="LoaiHang_BLL.cs" />

@@ -155,6 +155,7 @@
             this.txtMaSP.Location = new System.Drawing.Point(158, 27);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
             this.txtMaSP.Size = new System.Drawing.Size(158, 27);
             this.txtMaSP.TabIndex = 21;
             // 

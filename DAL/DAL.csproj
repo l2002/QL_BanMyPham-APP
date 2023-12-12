@@ -48,6 +48,7 @@
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="DonHangOnlAccess.cs" />
     <Compile Include="DonHangAccess.cs" />
+    <Compile Include="IP_EPAccess.cs" />
     <Compile Include="KhachHangAccesss.cs" />
     <Compile Include="KhuyenMaiAccess.cs" />
     <Compile Include="LoaiHangAccess.cs" />
