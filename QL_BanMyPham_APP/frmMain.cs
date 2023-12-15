@@ -40,6 +40,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,7 +66,7 @@ namespace QL_BanMyPham_APP
                 MessageBox.Show("Bạn không có quyền truy cập trang này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            btnHome.BackColor = Color.FromArgb(46, 51, 73);
+            btnNhanVien.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Nhân Viên";
             this.pnLoad.Controls.Clear();
@@ -62,11 +74,24 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            btnHome_Click(sender, e);
         }
 
         private void btnNCCHSX_Click(object sender, EventArgs e)
@@ -79,6 +104,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
@@ -92,11 +129,23 @@ namespace QL_BanMyPham_APP
 
             this.pnLoad.Controls.Add(Child);
             Child.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            btnHoaDon.BackColor = Color.FromArgb(46, 51, 73);
+            button3.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Giao Hàng";
             this.pnLoad.Controls.Clear();
@@ -104,6 +153,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnSP_Click(object sender, EventArgs e)
@@ -116,6 +177,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnKhuyenMai_Click(object sender, EventArgs e)
@@ -128,6 +201,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
@@ -145,6 +230,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -162,23 +259,27 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
-
-            lblTitle.Text = "Khách hàng";
-            this.pnLoad.Controls.Clear();
-            frmKhachHang frm = new frmKhachHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frm.FormBorderStyle = FormBorderStyle.None;
-            this.pnLoad.Controls.Add(frm);
-            frm.Show();
+            
         }
 
         private void btnLoaiHang_Click(object sender, EventArgs e)
         {
-            btnBaoCao.BackColor = Color.FromArgb(46, 51, 73);
+            btnLoaiHang.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Loại hàng";
             this.pnLoad.Controls.Clear();
@@ -186,6 +287,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnNhap_Xuat_Click(object sender, EventArgs e)
@@ -198,6 +311,18 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnKhach.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
         }
 
         private void btnKhach_Click(object sender, EventArgs e)
@@ -210,6 +335,38 @@ namespace QL_BanMyPham_APP
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
+
+            btnNhanVien.BackColor = Color.DarkSlateBlue;
+            btnHome.BackColor = Color.DarkSlateBlue;
+            btnSP.BackColor = Color.DarkSlateBlue;
+            btnLoaiHang.BackColor = Color.DarkSlateBlue;
+            btnNCCHSX.BackColor = Color.DarkSlateBlue;
+            btnHoaDon.BackColor = Color.DarkSlateBlue;
+            btnTaiKhoan.BackColor = Color.DarkSlateBlue;
+            btnKhuyenMai.BackColor = Color.DarkSlateBlue;
+            btnBaoCao.BackColor = Color.DarkSlateBlue;
+            button3.BackColor = Color.DarkSlateBlue;
+            btnNhap_Xuat.BackColor = Color.DarkSlateBlue;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin Child = new frmLogin();
+                Child.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -45,13 +45,16 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.avt = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pnLoad = new System.Windows.Forms.Panel();
+            this.avt = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pnLoad = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
@@ -263,56 +266,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.lblMa);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblMaNV);
             this.panel2.Controls.Add(this.lblName);
-            this.panel2.Controls.Add(this.avt);
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 181);
             this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(24, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Mã NV:";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblMaNV
             // 
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNV.ForeColor = System.Drawing.Color.Aqua;
-            this.lblMaNV.Location = new System.Drawing.Point(100, 110);
+            this.lblMaNV.Location = new System.Drawing.Point(103, 36);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(100, 24);
+            this.lblMaNV.Size = new System.Drawing.Size(0, 24);
             this.lblMaNV.TabIndex = 6;
-            this.lblMaNV.Text = "Xin chào:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Yellow;
-            this.lblName.Location = new System.Drawing.Point(22, 143);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(209, 25);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "Nguyễn Minh Luân";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // avt
-            // 
-            this.avt.Location = new System.Drawing.Point(72, 7);
-            this.avt.Name = "avt";
-            this.avt.Size = new System.Drawing.Size(100, 87);
-            this.avt.TabIndex = 0;
-            this.avt.TabStop = false;
             // 
             // button1
             // 
@@ -327,13 +301,75 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // avt
+            // 
+            this.avt.Location = new System.Drawing.Point(430, 81);
+            this.avt.Name = "avt";
+            this.avt.Size = new System.Drawing.Size(920, 506);
+            this.avt.TabIndex = 0;
+            this.avt.TabStop = false;
+            // 
             // pnLoad
             // 
-            this.pnLoad.BackgroundImage = global::QL_BanMyPham_APP.Properties.Resources.my_pham_noi_dia_trung_12_min;
             this.pnLoad.Location = new System.Drawing.Point(250, 110);
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(1366, 752);
             this.pnLoad.TabIndex = 6;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(47, 110);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(130, 50);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Aqua;
+            this.label2.Location = new System.Drawing.Point(100, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 24);
+            this.label2.TabIndex = 9;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Yellow;
+            this.lblName.Location = new System.Drawing.Point(22, 64);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(209, 25);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Nguyễn Minh Luân";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.Location = new System.Drawing.Point(24, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Mã NV:";
+            // 
+            // lblMa
+            // 
+            this.lblMa.AutoSize = true;
+            this.lblMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMa.ForeColor = System.Drawing.Color.Aqua;
+            this.lblMa.Location = new System.Drawing.Point(106, 31);
+            this.lblMa.Name = "lblMa";
+            this.lblMa.Size = new System.Drawing.Size(0, 24);
+            this.lblMa.TabIndex = 10;
             // 
             // frmMain
             // 
@@ -368,10 +404,8 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox avt;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel pnLoad;
         private System.Windows.Forms.Button btnSP;
         private System.Windows.Forms.Button btnNCCHSX;
         private System.Windows.Forms.BindingSource bindingSource1;
@@ -381,10 +415,15 @@
         private System.Windows.Forms.Button btnKhuyenMai;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMaNV;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLoaiHang;
         private System.Windows.Forms.Button btnNhap_Xuat;
         private System.Windows.Forms.Button btnKhach;
+        private System.Windows.Forms.Panel pnLoad;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
     }
 }
 

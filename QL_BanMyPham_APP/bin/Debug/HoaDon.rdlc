@@ -293,7 +293,7 @@
         <Top>3.19828cm</Top>
         <Left>3.78037cm</Left>
         <Height>1.2cm</Height>
-        <Width>24.12875cm</Width>
+        <Width>24.12874cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -315,10 +315,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>MaDH</rd:DefaultName>
-        <Top>1.00224cm</Top>
+        <Top>1.61078cm</Top>
         <Left>3.78037cm</Left>
-        <Height>1.28792cm</Height>
-        <Width>6.36292cm</Width>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

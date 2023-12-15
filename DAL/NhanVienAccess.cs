@@ -32,7 +32,7 @@ namespace DAL
         }
         public int suaNhanVien(NhanVien nv)
         {
-            string sql = "update NhanVien set tennv=N'" + nv.TenNV + "',gioitinh=N'" + nv.GioiTinh + "',diachi=N'" + nv.DiaChi + "',dienthoai='" + nv.DienThoai + "',ngaysinh='" + nv.NgaySinh + "' where manv = '"+nv.MaNV+"'";
+            string sql = "update NhanVien set tennv=N'" + nv.TenNV + "',gioitinh=N'" + nv.GioiTinh + "',diachi=N'" + nv.DiaChi + "',dienthoai='" + nv.DienThoai + "',ngaysing='" + nv.NgaySinh + "' where manv = '"+nv.MaNV+"'";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }

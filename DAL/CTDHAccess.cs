@@ -24,6 +24,20 @@ namespace DAL
             dt.Columns[7].ColumnName = "Thành tiền";
             return dt;
         }
+        public DataTable getCTDHKKM(CTDonHang ctdh)
+        {
+            DataTable dt = database.fillTable("SELECT MaDH,a.MaSP, b.TenSP, a.SOLUONGMUA,b.HSD, b.GiaBan, makm,a.THANHTIEN FROM CTDonHang AS a, SanPham AS b WHERE a.MaDH = '"+ctdh.MaDH+"' AND a.MaSP=b.MaSP and b.makm is null");
+            dt.Columns[0].ColumnName = "Mã đơn hàng";
+            dt.Columns[1].ColumnName = "Mã SP";
+            dt.Columns[2].ColumnName = "Tên SP";
+            dt.Columns[3].ColumnName = "Số lượng mua";
+            dt.Columns[4].ColumnName = "Hạn sử dụng";
+            dt.Columns[5].ColumnName = "Giá bán";
+            dt.Columns[6].ColumnName = "Khuyến mãi";
+            dt.Columns[7].ColumnName = "Thành tiền";
+            return dt;
+        }
+
         public int themCTHD(CTDonHang ctdh)
         {
             string sql = "INSERT INTO CTDonHang(MaDH, MaSP, SoLuongMua, DonGia, ThanhTien) VALUES (N'" + ctdh.MaDH.Trim() + "'," +

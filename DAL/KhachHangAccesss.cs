@@ -30,7 +30,7 @@ namespace DAL
         }
         public int suaKhachHang(KhachHang kh)
         {
-            string sql = "update KhachHang set tenkh=N'" + kh.TenKH + "',diachi=N'" + kh.DiaChi + "',dienthoai='" + kh.DienThoai + "',ngaysinh='" + kh.NgaySinh + "' where makh = '" + kh.MaKH + "'";
+            string sql = "update KhachHang set tenkh=N'" + kh.TenKH + "',diachi=N'" + kh.DiaChi + "',dienthoai='" + kh.DienThoai + "',ngaysing='" + kh.NgaySinh + "' where makh = '" + kh.MaKH + "'";
             int kq = database.excuteNonQuery(sql);
             return kq;
         }

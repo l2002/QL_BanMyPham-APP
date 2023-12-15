@@ -18,6 +18,10 @@ namespace BLL
         {
             return ctdhAccess.getCTDH(ctdh);
         }
+        public DataTable getCTDHKKM(CTDonHang ctdh)
+        {
+            return ctdhAccess.getCTDHKKM(ctdh);
+        }
         public int themCTHD(CTDonHang ctdh)
         {
             return ctdhAccess.themCTHD(ctdh);

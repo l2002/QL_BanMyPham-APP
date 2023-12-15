@@ -12,7 +12,6 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\bin\Debug\DAL.pdb
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmIP_EP.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBanHang.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBaoCao.resources
@@ -31,40 +30,8 @@ C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyP
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmTrangChu.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.Properties.Resources.resources
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.GenerateResource.cache
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csproj.CopyComplete
-<<<<<<< HEAD
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.exe
 C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.pdb
-=======
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBaoCao.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmCTDH.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmHDReport.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhuyenMai.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLoaiHang.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLogin.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmTaiKhoan.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmThuongHieu.resources
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\bin\Debug\HoaDon.rdlc
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\bin\Debug\EntityFramework.dll
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\bin\Debug\EntityFramework.xml
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lenovo\source\repos\QL_BanMyPham-APP2\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhachHang.resources
->>>>>>> b0690e4e0925a8bcf4ee4b835be7cdc348fbc072
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmIP_EP.resources
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhachHang.resources
-C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLoaiHang.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmIP_EP.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmBaoCao.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmHDReport.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmKhachHang.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmLoaiHang.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmTaiKhoan.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\obj\Debug\QL_BanMyPham_APP.frmThuongHieu.resources
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\HoaDon.rdlc
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.dll
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.xml
-C:\Users\Lenovo\Source\Repos\QL_BanMyPham-APP\QL_BanMyPham_APP\bin\Debug\EntityFramework.SqlServer.xml
->>>>>>> c55eda58bbc2bcfd42575f4df28c1aeb0c855d63
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\RdlCompile.cache
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\RdlCompile.compiled
+C:\Users\ASUS\Desktop\IT2\NĂM 4\ĐỒ ÁN CHUYÊN NGÀNH\TUẦN 5_APP\QL_BanMyPham-main\QL_BanMyPham_APP\obj\Debug\GUI.csprojResolveAssemblyReference.cache

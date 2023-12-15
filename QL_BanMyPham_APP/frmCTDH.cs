@@ -40,53 +40,68 @@ namespace QL_BanMyPham_APP
 
         private void loadCombo()
         {
-            spBLL.FillCombo("SELECT MaSP,TenSP FROM SanPham", cboMaSP, "MaSP", "TenSP");
-            cboMaSP.SelectedIndex = -1;
+            spBLL.FillCombo("SELECT MaSP,TenSP FROM SanPham", cboTenSP, "MaSP", "TenSP");
+            cboTenSP.SelectedIndex = -1;
         }
 
         private void loadTable()
         {
-            dgvDS.DataSource = ctdhBLL.getCTDH(ctdhDTO);
+            DataTable dt = ctdhBLL.getCTDH(ctdhDTO);
+            DataTable dt2 = ctdhBLL.getCTDHKKM(ctdhDTO);
+
+            if (dt2.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt2.Rows)
+                {
+                    dt.ImportRow(row);
+                }
+            } 
+   
+            dgvDS.DataSource = dt;
+           
             txtTongTien.Text = dhBLL.getTongTien(txtMaDH.Text).ToString();
 
             txtSoLuong.Text = "0";
             txtGiaBan.Text = "0";
             txtThanhTien.Text = "0";
-          
         }
         private void frmCTDH_Load(object sender, EventArgs e)
         {
             loadCombo();
             this.CenterToScreen();
             loadTable();
-
+            SetFontAndColors();
         }
-
+        private void SetFontAndColors()
+        {
+            this.dgvDS.DefaultCellStyle.Font = new Font("Tahoma", 14);
+            this.dgvDS.DefaultCellStyle.BackColor = Color.Beige;
+            this.dgvDS.DefaultCellStyle.SelectionBackColor = Color.Aqua;
+        }
         private void cboMaSP_TextChanged(object sender, EventArgs e)
         {
+            
             string str;
-            if (cboMaSP.Text == "")
+            if (cboTenSP.Text == "")
             {
                 txtMaSP.Text = "";
             }
-            str = "SELECT MaSP FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
+
+            str = "SELECT MaSP FROM SanPham WHERE MaSP = N'" + cboTenSP.SelectedValue + "'";
             txtMaSP.Text = spBLL.GetFieldValues(str);
-            str = "SELECT HSD FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
+            str = "SELECT HSD FROM SanPham WHERE MaSP = N'" + cboTenSP.SelectedValue + "'";
             txtHSD.Text = spBLL.GetFieldValues(str);
-            str = "SELECT GiaBan FROM SanPham WHERE MaSP = N'" + cboMaSP.SelectedValue + "'";
+            str = "SELECT GiaBan FROM SanPham WHERE MaSP = N'" + cboTenSP.SelectedValue + "'";
             txtGiaBan.Text = spBLL.GetFieldValues(str);
 
-            str = "select KhuyenMai.TenKM from SanPham,KhuyenMai WHERE MaSP = N'" + cboMaSP.SelectedValue + "' and SanPham.MaKM=KhuyenMai.MaKM";
-            if (txtKhuyenMai.Text == null)
-            {
-                txtKhuyenMai.Text = "0";
-            }
-            else
-            {
-                txtKhuyenMai.Text = spBLL.GetFieldValues(str);
-            }
-            str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
+            str = "select KhuyenMai.TenKM from SanPham,KhuyenMai WHERE MaSP = N'" + cboTenSP.SelectedValue + "' and SanPham.MaKM=KhuyenMai.MaKM";
+            txtKhuyenMai.Text = spBLL.GetFieldValues(str);
+
+            str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + txtMaSP.Text + "' and SanPham.MaSP=LoHang.MaSP\r\n";
             txtSLCon.Text = ctdhBLL.GetFieldValues(str);
+
+            txtSoLuong.Text = "0";
+            txtThanhTien.Text = "0";
         }
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
@@ -119,7 +134,7 @@ namespace QL_BanMyPham_APP
                 MessageBox.Show("Vui lòng nhập số lượng!");
                 return 0;
             }
-            if (cboMaSP.SelectedValue == null)
+            if (cboTenSP.SelectedValue == null)
             {
                 MessageBox.Show("Vui chọn sản phẩm!");
                 return 0;
@@ -136,47 +151,47 @@ namespace QL_BanMyPham_APP
         }
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            if (txtMaSP.Text == "")
-            {
-                MessageBox.Show("Vui lòng chọn Mã Sản phẩm!", "Thông báo", MessageBoxButtons.OK);
-                return;
-            }
-
-            ctdhDTO.MaDH = txtMaDH.Text;
-            ctdhDTO.MaSP = cboMaSP.SelectedValue.ToString();
-            ctdhDTO.SoLuongMua = int.Parse(txtSoLuong.Text);
-            ctdhDTO.ThanhTien = double.Parse(txtThanhTien.Text);
-
-            if (checkInput()==1)
-            {
-                if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
+                if (txtMaSP.Text == "")
                 {
-                    if (ctdhDTO.SoLuongMua > int.Parse(txtSLCon.Text))
+                    MessageBox.Show("Vui lòng chọn Mã Sản phẩm!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                if (txtSoLuong.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập số lượng!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+                ctdhDTO.MaDH = txtMaDH.Text;
+                ctdhDTO.MaSP = cboTenSP.SelectedValue.ToString();
+                ctdhDTO.SoLuongMua = int.Parse(txtSoLuong.Text);
+                ctdhDTO.ThanhTien = double.Parse(txtThanhTien.Text);
+                ctdhDTO.DonGia = double.Parse(txtGiaBan.Text);
+
+                if (checkInput() == 1)
+                {
+                    if (ctdhBLL.ktraSPDaCo(ctdhDTO) != 0)
                     {
-                        MessageBox.Show("Số lượng mua vượt quá Số lượng tồn", "Thông báo", MessageBoxButtons.OK);
-                        return;
-                    }
-                    if (ctdhBLL.themCTHD(ctdhDTO) != -1)
-                    {
-                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                        if (ctdhDTO.SoLuongMua > int.Parse(txtSLCon.Text))
+                        {
+                            MessageBox.Show("Số lượng mua vượt quá Số lượng tồn", "Thông báo", MessageBoxButtons.OK);
+                            return;
+                        }
+                        if (ctdhBLL.themCTHD(ctdhDTO) != -1)
+                        {
+                            MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                        }
+                        loadTable();
+                        resetValue();
                     }
                     else
                     {
-                        MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Sản phẩm này đã có!");
                     }
-                    loadTable();
-                    resetValue();
-                }
-                else
-                {
-                    MessageBox.Show("Sản phẩm này đã có!");
-                }
             }
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -185,7 +200,7 @@ namespace QL_BanMyPham_APP
         }
         private void dgvDS_DoubleClick(object sender, EventArgs e)
         {
-            string MaHangxoa, sql;
+            string MaHangxoa;
             double thanhTienXoa, tong, tongmoi;
 
             if (txtMaSP.Text=="")
@@ -204,7 +219,7 @@ namespace QL_BanMyPham_APP
 
                 //// Cập nhật lại số lượng cho các mặt hàng(TRIGGER)
                 string str;
-                str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
+                str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + txtMaSP.Text + "' and SanPham.MaSP=LoHang.MaSP\r\n";
                 txtSLCon.Text = ctdhBLL.GetFieldValues(str);
 
                 // Cập nhật lại tổng tiền cho hóa đơn bán
@@ -225,23 +240,22 @@ namespace QL_BanMyPham_APP
 
         private void dgvDS_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                cboMaSP.SelectedValue= dgvDS.CurrentRow.Cells[1].Value.ToString();
-                txtMaSP.Text = dgvDS.CurrentRow.Cells[2].Value.ToString();
+           try{
+                txtMaSP.Text = dgvDS.CurrentRow.Cells[1].Value.ToString();
+                cboTenSP.SelectedValue = dgvDS.CurrentRow.Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvDS.CurrentRow.Cells[3].Value.ToString();
                 txtHSD.Text = dgvDS.CurrentRow.Cells[4].Value.ToString();
                 txtGiaBan.Text = dgvDS.CurrentRow.Cells[5].Value.ToString();
                 txtKhuyenMai.Text = dgvDS.CurrentRow.Cells[6].Value.ToString();
                 txtThanhTien.Text = dgvDS.CurrentRow.Cells[7].Value.ToString();
 
-                string str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + cboMaSP.SelectedValue + "' and SanPham.MaSP=LoHang.MaSP\r\n";
+                string str = "select LoHang.SoLuong from SanPham,LoHang where SanPham.MaSP='" + txtMaSP.Text + "' and SanPham.MaSP=LoHang.MaSP\r\n";
                 txtSLCon.Text = ctdhBLL.GetFieldValues(str);
-            }
-            catch
-            {
-                return;
-            }
+           }
+           catch {
+               return;
+           }
+            dgvDS.ReadOnly = true;
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -261,8 +275,6 @@ namespace QL_BanMyPham_APP
         {
             //frmHDReport frm=new frmHDReport();
             //frm.Show();
-
-
         }
     }
 }

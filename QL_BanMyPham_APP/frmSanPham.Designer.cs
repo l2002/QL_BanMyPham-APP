@@ -68,7 +68,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(1089, 260);
+            this.btnXoa.Location = new System.Drawing.Point(1064, 259);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(149, 55);
@@ -80,7 +80,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(817, 260);
+            this.btnLuu.Location = new System.Drawing.Point(792, 259);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(149, 55);
@@ -92,7 +92,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(534, 260);
+            this.btnThem.Location = new System.Drawing.Point(509, 259);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(149, 55);
@@ -115,7 +115,7 @@
             // 
             this.cboMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMaLoai.FormattingEnabled = true;
-            this.cboMaLoai.Location = new System.Drawing.Point(422, 27);
+            this.cboMaLoai.Location = new System.Drawing.Point(448, 26);
             this.cboMaLoai.Margin = new System.Windows.Forms.Padding(2);
             this.cboMaLoai.Name = "cboMaLoai";
             this.cboMaLoai.Size = new System.Drawing.Size(85, 30);
@@ -124,10 +124,10 @@
             // txtHinhAnh
             // 
             this.txtHinhAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHinhAnh.Location = new System.Drawing.Point(422, 63);
+            this.txtHinhAnh.Location = new System.Drawing.Point(448, 62);
             this.txtHinhAnh.Margin = new System.Windows.Forms.Padding(2);
             this.txtHinhAnh.Name = "txtHinhAnh";
-            this.txtHinhAnh.Size = new System.Drawing.Size(250, 27);
+            this.txtHinhAnh.Size = new System.Drawing.Size(186, 27);
             this.txtHinhAnh.TabIndex = 18;
             // 
             // txtTenSP
@@ -135,8 +135,9 @@
             this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSP.Location = new System.Drawing.Point(158, 63);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenSP.Multiline = true;
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(158, 27);
+            this.txtTenSP.Size = new System.Drawing.Size(196, 72);
             this.txtTenSP.TabIndex = 19;
             // 
             // txtGiaBan
@@ -156,7 +157,7 @@
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.ReadOnly = true;
-            this.txtMaSP.Size = new System.Drawing.Size(158, 27);
+            this.txtMaSP.Size = new System.Drawing.Size(196, 27);
             this.txtMaSP.TabIndex = 21;
             // 
             // label7
@@ -176,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(341, 63);
+            this.label5.Location = new System.Drawing.Point(367, 62);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 22);
@@ -212,7 +213,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(341, 27);
+            this.label4.Location = new System.Drawing.Point(367, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 22);
@@ -234,10 +235,10 @@
             // dgvSanPham
             // 
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSanPham.Location = new System.Drawing.Point(10, 370);
+            this.dgvSanPham.Location = new System.Drawing.Point(10, 380);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.RowHeadersWidth = 51;
-            this.dgvSanPham.Size = new System.Drawing.Size(1348, 391);
+            this.dgvSanPham.Size = new System.Drawing.Size(1348, 381);
             this.dgvSanPham.TabIndex = 11;
             this.dgvSanPham.SelectionChanged += new System.EventHandler(this.dgvSanPham_SelectionChanged);
             // 
@@ -266,10 +267,10 @@
             // btnBrowse
             // 
             this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(678, 64);
+            this.btnBrowse.Location = new System.Drawing.Point(653, 64);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(58, 24);
+            this.btnBrowse.Size = new System.Drawing.Size(83, 28);
             this.btnBrowse.TabIndex = 27;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -280,7 +281,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(18, 326);
+            this.label8.Location = new System.Drawing.Point(20, 337);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 22);
@@ -291,7 +292,7 @@
             // 
             this.cboLo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLo.FormattingEnabled = true;
-            this.cboLo.Location = new System.Drawing.Point(49, 323);
+            this.cboLo.Location = new System.Drawing.Point(51, 334);
             this.cboLo.Margin = new System.Windows.Forms.Padding(2);
             this.cboLo.Name = "cboLo";
             this.cboLo.Size = new System.Drawing.Size(103, 30);
@@ -302,7 +303,7 @@
             // 
             this.btnTaoLo.Enabled = false;
             this.btnTaoLo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoLo.Location = new System.Drawing.Point(259, 260);
+            this.btnTaoLo.Location = new System.Drawing.Point(234, 259);
             this.btnTaoLo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoLo.Name = "btnTaoLo";
             this.btnTaoLo.Size = new System.Drawing.Size(149, 55);
@@ -381,7 +382,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F);
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(217, 337);
+            this.label12.Location = new System.Drawing.Point(197, 337);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(280, 22);
@@ -407,17 +408,17 @@
             this.cboMaLo.Location = new System.Drawing.Point(1262, 62);
             this.cboMaLo.Margin = new System.Windows.Forms.Padding(2);
             this.cboMaLo.Name = "cboMaLo";
-            this.cboMaLo.Size = new System.Drawing.Size(103, 30);
+            this.cboMaLo.Size = new System.Drawing.Size(88, 30);
             this.cboMaLo.TabIndex = 22;
             // 
             // txtMoTa
             // 
             this.txtMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(422, 119);
+            this.txtMoTa.Location = new System.Drawing.Point(422, 157);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(555, 110);
+            this.txtMoTa.Size = new System.Drawing.Size(555, 75);
             this.txtMoTa.TabIndex = 31;
             // 
             // label14
@@ -425,7 +426,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label14.Location = new System.Drawing.Point(349, 160);
+            this.label14.Location = new System.Drawing.Point(349, 177);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 22);

@@ -126,12 +126,18 @@ namespace QL_BanMyPham_APP
 
         private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (dgvNhanVien.RowCount == 1)
+                return;
+            else if (dgvNhanVien.CurrentRow != null && dgvNhanVien.CurrentRow.Index < dgvNhanVien.Rows.Count - 1)
+            {
+                txtMaNV.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                txtTenNV.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString();
+                cboGioiTinh.SelectedValue = dgvNhanVien.CurrentRow.Cells[2].Value.ToString();
+                txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
+                txtDienThoai.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString();
+                dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[5].Value.ToString();
+            }
+            dgvNhanVien.ReadOnly = true;
         }
     }
 }

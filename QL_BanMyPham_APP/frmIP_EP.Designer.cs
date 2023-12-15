@@ -36,7 +36,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.Location = new System.Drawing.Point(525, 193);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(309, 126);
@@ -47,7 +47,7 @@
             // 
             // btnExport
             // 
-            this.btnExport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.Location = new System.Drawing.Point(525, 424);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(309, 126);

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QL_BanMyPham_APP
 {
@@ -132,15 +131,17 @@ namespace QL_BanMyPham_APP
             }
         }
 
-        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvKhachHang.SelectedRows.Count > 0)
+            if (dgvKhachHang.RowCount == 1)
+                return;
+            else if (dgvKhachHang.CurrentRow != null && dgvKhachHang.CurrentRow.Index < dgvKhachHang.Rows.Count - 1)
             {
-                txtMaKH.Text = dgvKhachHang.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenKH.Text = dgvKhachHang.SelectedRows[1].Cells[1].Value.ToString();
-                txtDiaChi.Text = dgvKhachHang.SelectedRows[2].Cells[2].Value.ToString();
-                txtDienThoai.Text = dgvKhachHang.SelectedRows[3].Cells[3].Value.ToString();
-                dtpNgaySinh.Text = dgvKhachHang.SelectedRows[4].Cells[4].Value.ToString();              
+                txtMaKH.Text = dgvKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtTenKH.Text = dgvKhachHang.CurrentRow.Cells[1].Value.ToString();
+                txtDiaChi.Text = dgvKhachHang.CurrentRow.Cells[2].Value.ToString();
+                txtDienThoai.Text = dgvKhachHang.CurrentRow.Cells[3].Value.ToString();
+                dtpNgaySinh.Text = dgvKhachHang.CurrentRow.Cells[4].Value.ToString();
             }
             dgvKhachHang.ReadOnly = true;
         }

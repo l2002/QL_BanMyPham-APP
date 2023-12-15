@@ -38,6 +38,8 @@ namespace QL_BanMyPham_APP
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             btnTaoLo.Enabled = true;
+
+
         }
 
         private void frmSanPham_Load(object sender, EventArgs e)
@@ -96,7 +98,7 @@ namespace QL_BanMyPham_APP
                         return;
                     else if (dgvSanPham.CurrentRow != null && dgvSanPham.CurrentRow.Index < dgvSanPham.Rows.Count - 1)
                     {
-                        spDTO.MaSP = dgvSanPham.CurrentRow.Cells[0].Value.ToString();
+                        spDTO.MaSP = txtMaSP.Text;
                         spDTO.TenSP = txtTenSP.Text;
                         spDTO.MaLoai = cboMaLoai.SelectedValue.ToString();
                         spDTO.MaTH = cboThuongHieu.SelectedValue.ToString();
@@ -258,6 +260,7 @@ namespace QL_BanMyPham_APP
                 spDTO.HSD = dtpHSD.Text;
                 spDTO.GiaBan = float.Parse(txtGiaBan.Text);
                 spDTO.MoTa = txtMoTa.Text;
+                
                 spBLL.themSanPham(spDTO);
                 loDTO.MaLo = malo;
                 loDTO.MaSP = txtMaSP.Text;

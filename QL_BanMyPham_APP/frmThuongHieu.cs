@@ -122,17 +122,6 @@ namespace QL_BanMyPham_APP
             }
         }
 
-        private void dgvThuongHieu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvThuongHieu.SelectedRows.Count > 0)
-            {
-                txtMaTH.Text = dgvThuongHieu.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenTH.Text = dgvThuongHieu.SelectedRows[0].Cells[1].Value.ToString();
-                
-            }
-            dgvThuongHieu.ReadOnly = true;
-        }
-
         private void btnThemNCC_Click(object sender, EventArgs e)
         {
             if (checkTextBox1())
@@ -223,11 +212,29 @@ namespace QL_BanMyPham_APP
 
         private void dgvNCC_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvNCC.SelectedRows.Count > 0)
-            {
-                txtMaNCC.Text = dgvNCC.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenNCC.Text = dgvNCC.SelectedRows[0].Cells[1].Value.ToString();
 
+        }
+
+        private void dgvThuongHieu_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvThuongHieu.RowCount == 1)
+                return;
+            else if (dgvThuongHieu.CurrentRow != null && dgvThuongHieu.CurrentRow.Index < dgvThuongHieu.Rows.Count - 1)
+            {
+                txtMaTH.Text = dgvThuongHieu.CurrentRow.Cells[0].Value.ToString();
+                txtTenTH.Text = dgvThuongHieu.CurrentRow.Cells[1].Value.ToString();
+            }
+            dgvNCC.ReadOnly = true;
+        }
+
+        private void dgvNCC_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvNCC.RowCount == 1)
+                return;
+            else if (dgvNCC.CurrentRow != null && dgvNCC.CurrentRow.Index < dgvNCC.Rows.Count - 1)
+            {
+                txtMaNCC.Text = dgvNCC.CurrentRow.Cells[0].Value.ToString();
+                txtTenNCC.Text = dgvNCC.CurrentRow.Cells[1].Value.ToString();
             }
             dgvNCC.ReadOnly = true;
         }

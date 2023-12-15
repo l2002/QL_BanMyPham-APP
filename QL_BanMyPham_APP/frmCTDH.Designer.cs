@@ -37,7 +37,7 @@
             this.txtHSD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboMaSP = new System.Windows.Forms.ComboBox();
+            this.cboTenSP = new System.Windows.Forms.ComboBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
@@ -53,7 +53,6 @@
             this.btnDong = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnIn = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDS)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +67,7 @@
             this.groupBox2.Controls.Add(this.txtHSD);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.cboMaSP);
+            this.groupBox2.Controls.Add(this.cboTenSP);
             this.groupBox2.Controls.Add(this.txtThanhTien);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtGiaBan);
@@ -87,7 +86,6 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin sản phẩm:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label5
             // 
@@ -171,15 +169,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Khuyễn mãi:";
             // 
-            // cboMaSP
+            // cboTenSP
             // 
-            this.cboMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboMaSP.FormattingEnabled = true;
-            this.cboMaSP.Location = new System.Drawing.Point(215, 132);
-            this.cboMaSP.Name = "cboMaSP";
-            this.cboMaSP.Size = new System.Drawing.Size(263, 33);
-            this.cboMaSP.TabIndex = 17;
-            this.cboMaSP.TextChanged += new System.EventHandler(this.cboMaSP_TextChanged);
+            this.cboTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTenSP.FormattingEnabled = true;
+            this.cboTenSP.Location = new System.Drawing.Point(215, 132);
+            this.cboTenSP.Name = "cboTenSP";
+            this.cboTenSP.Size = new System.Drawing.Size(263, 33);
+            this.cboTenSP.TabIndex = 17;
+            this.cboTenSP.TextChanged += new System.EventHandler(this.cboMaSP_TextChanged);
             // 
             // txtThanhTien
             // 
@@ -302,7 +300,7 @@
             this.btnDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDong.Location = new System.Drawing.Point(429, 713);
+            this.btnDong.Location = new System.Drawing.Point(555, 713);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(187, 60);
             this.btnDong.TabIndex = 26;
@@ -330,26 +328,12 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "Tổng tiền:";
             // 
-            // btnIn
-            // 
-            this.btnIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIn.Location = new System.Drawing.Point(692, 713);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(187, 60);
-            this.btnIn.TabIndex = 45;
-            this.btnIn.Text = "IN HÓA ĐƠN";
-            this.btnIn.UseVisualStyleBackColor = false;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
             // frmCTDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
-            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDong);
@@ -370,7 +354,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cboMaSP;
+        private System.Windows.Forms.ComboBox cboTenSP;
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtGiaBan;
@@ -394,6 +378,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label txtKhuyenMai;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnIn;
     }
 }

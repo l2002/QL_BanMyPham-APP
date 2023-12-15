@@ -41,26 +41,16 @@ namespace QL_BanMyPham_APP
         }
         private void fillChart()
         {
-            try
-            {
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-J787359;Initial Catalog=QL_MyPham_DA;Integrated Security=true;");
                 DataSet ds = new DataSet();
                 con.Open();
                 SqlDataAdapter adapt = new SqlDataAdapter("SELECT TOP 10 KhachHang.TenKH as Ten, SUM(TongTien) as TongTien FROM DonHang,KhachHang where KhachHang.MaKH=DonHang.MaKH GROUP BY KhachHang.TenKH ORDER BY TongTien DESC", con);
                 adapt.Fill(ds);
                 chart.DataSource = ds;
-                //set the member of the chart data source used to data bind to the X-values of the series  
                 chart.Series["DonHang"].XValueMember = "Ten";
-                //set the member columns of the chart data source used to data bind to the X-values of the series  
                 chart.Series["DonHang"].YValueMembers = "TongTien";
                 chart.Titles.Add("TOP 10 KHÁCH HÀNG CÓ TỔNG TIỀN MUA NHIỀU NHẤT");
                 con.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Chưa có dữ liệu để hiển thị!");
-                return;
-            }
         }   
     }
 }
