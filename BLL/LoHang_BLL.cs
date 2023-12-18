@@ -46,5 +46,9 @@ namespace BLL
         {
             return lohang.timLoHang(malo);
         }
+        public string getMaLoBangMaSP(string masp)
+        {
+            return lohang.getMaLoBangMaSP(masp);
+        }
     }
 }

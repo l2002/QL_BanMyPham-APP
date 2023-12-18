@@ -24,6 +24,19 @@ namespace DAL
             dt.Columns[7].ColumnName = "Giá bán";
             dt.Columns[8].ColumnName = "Mô tả";
         }
+        public List<SanPham> getListSanPham()
+        {
+            List<SanPham> list = new List<SanPham>();
+            DataTable dt = database.fillTable("select * from SanPham");
+            foreach (DataRow dr in dt.Rows)
+            {
+                SanPham sp = new SanPham();
+                sp.MaSP = dr[0].ToString();
+                sp.TenSP = dr[1].ToString();
+                list.Add(sp);
+            }
+            return list;
+        }
         public DataTable getSanPham()
         {
             DataTable dt = database.fillTable("select * from SanPham");
@@ -53,6 +66,25 @@ namespace DAL
             string sql = "select count(*) from SanPham where masp = '" + masp + "'";
             int kq = database.executeScalar(sql);
             return kq;
+        }
+        public SanPham getSanPhamTheoMa(string masp)
+        {
+            string sql = "select * from SanPham where masp = '" + masp + "'";
+            DataTable dt = database.fillTable(sql);
+            SanPham sp = new SanPham();
+            foreach(DataRow row in dt.Rows)
+            {
+                sp.MaSP = row[0].ToString();
+                sp.TenSP = row[1].ToString();
+                sp.MaLoai = row[2].ToString();
+                sp.MaKM = row[3].ToString();
+                sp.MaTH = row[4].ToString();
+                sp.HSD = row[5].ToString();
+                sp.HinhAnh = row[6].ToString();
+                sp.GiaBan = float.Parse(row[7].ToString());
+                sp.MoTa = row[8].ToString();
+            }
+            return sp;
         }
         public int updateKM(string masp, string makm)
         {

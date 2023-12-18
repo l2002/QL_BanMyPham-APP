@@ -28,7 +28,7 @@ namespace QL_BanMyPham_APP
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string path = Path.GetFullPath(sfd.FileName);
-                if(ipep.backupDatabase(path) == 1)
+                if(ipep.backupDatabase(path) != -1)
                 {
                     MessageBox.Show("Xuất dữ liệu thành công");
                 }    
@@ -48,7 +48,7 @@ namespace QL_BanMyPham_APP
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string path = Path.GetFullPath(ofd.FileName);
-                if(ipep.importDatabase(path) == 1)
+                if(ipep.importDatabase(path) != -1)
                 {
                     MessageBox.Show("Nhập dữ liệu thành công");
                 }

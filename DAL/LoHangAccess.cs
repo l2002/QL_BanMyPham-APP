@@ -60,7 +60,7 @@ namespace DAL
         }
         public int demLoHang()
         {
-            string sql = "select count(*) from LoHang";
+            string sql = "select count(DISTINCT malo) from LoHang";
             return database.executeScalar(sql);
         }
         public int timLoHang(string malo)
@@ -68,6 +68,20 @@ namespace DAL
             string sql = "select count(*) from LoHang where malo = '" + malo + "'";
             int kq = database.executeScalar(sql);
             return kq;
+        }
+        public string getMaLoBangMaSP(string masp)
+        {
+            string sql = "select top(1) MaLo from LoHang where masp = '" + masp + "'";
+            DataTable dt = database.fillTable(sql);
+            if(dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                return dr[0].ToString();
+            }
+            else
+            {
+                return "";
+            }    
         }
     }
 }

@@ -43,7 +43,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -77,7 +77,7 @@ namespace QL_BanMyPham_APP
 
             btnHome.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -107,7 +107,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnHome.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -132,7 +132,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHome.BackColor = Color.DarkSlateBlue;
@@ -156,7 +156,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -169,11 +169,11 @@ namespace QL_BanMyPham_APP
 
         private void btnSP_Click(object sender, EventArgs e)
         {
-            btnSP.BackColor = Color.FromArgb(46, 51, 73);
+            btnNhapHang.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Sản Phẩm";
             this.pnLoad.Controls.Clear();
-            frmSanPham frm = new frmSanPham() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmNhapHang frm = new frmNhapHang() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frm.FormBorderStyle = FormBorderStyle.None;
             this.pnLoad.Controls.Add(frm);
             frm.Show();
@@ -204,7 +204,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -233,7 +233,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -262,7 +262,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -290,7 +290,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnHome.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -314,7 +314,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnKhach.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;
@@ -338,7 +338,7 @@ namespace QL_BanMyPham_APP
 
             btnNhanVien.BackColor = Color.DarkSlateBlue;
             btnHome.BackColor = Color.DarkSlateBlue;
-            btnSP.BackColor = Color.DarkSlateBlue;
+            btnNhapHang.BackColor = Color.DarkSlateBlue;
             btnLoaiHang.BackColor = Color.DarkSlateBlue;
             btnNCCHSX.BackColor = Color.DarkSlateBlue;
             btnHoaDon.BackColor = Color.DarkSlateBlue;

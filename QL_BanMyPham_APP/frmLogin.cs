@@ -19,6 +19,7 @@ namespace QL_BanMyPham_APP
         public frmLogin()
         {
             InitializeComponent();
+            txtMatKhau.PasswordChar = '*';
         }
 
         private void button1_Click(object sender, EventArgs e)

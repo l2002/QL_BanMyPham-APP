@@ -13,7 +13,7 @@ namespace BLL
     public class SanPham_BLL
     {
         SanPhamAccess spAccess = new SanPhamAccess();
-        DatabaseAccess dbAccess=new DatabaseAccess();
+        DatabaseAccess dbAccess = new DatabaseAccess();
 
         public string GetFieldValues(string str)
         {
@@ -26,6 +26,10 @@ namespace BLL
         public DataTable getSanPham()
         {
             return spAccess.getSanPham();
+        }
+        public List<SanPham> getListSanPham()
+        {
+            return spAccess.getListSanPham();
         }
         public int themSanPham(SanPham sp)
         {
@@ -49,15 +53,19 @@ namespace BLL
         }
         public DataTable timSP_NhieuGiaTri(string tensp, float giaban, bool chuakm)
         {
-            return spAccess.timSP_NhieuGiaTri(tensp,giaban,chuakm);
+            return spAccess.timSP_NhieuGiaTri(tensp, giaban, chuakm);
         }
         public int suaKM(string makm, string makmsua)
         {
-            return spAccess.suaKM(makm,makmsua);
+            return spAccess.suaKM(makm, makmsua);
         }
         public int xoakm(string masp)
         {
             return spAccess.xoakm(masp);
+        }
+        public SanPham getSanPhamTheoMa(string masp)
+        {
+            return spAccess.getSanPhamTheoMa(masp);
         }
     }
 }
